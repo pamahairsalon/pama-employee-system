@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V6</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V104</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -820,53 +820,6 @@ img,svg,video{max-width:100%;height:auto}
 }
 
 /* ===== V102: Search jump navigation + simple role selection ===== */
-.role-control{
-  display:flex;align-items:center;gap:8px;margin-left:auto;
-  font-size:12px;letter-spacing:.08em;color:#FFF6E9;
-}
-.role-control button{
-  border:1px solid rgba(223,183,67,.45);background:transparent;color:#FFF6E9;
-  border-radius:999px;padding:6px 12px;cursor:pointer;font:inherit;
-}
-.role-control button.active{background:#DFB743;color:#294641}
-.search-result .item{
-  cursor:pointer;transition:background .18s ease;
-}
-.search-result .item:hover{background:rgba(223,183,67,.10)}
-.search-result .item .jump{display:block;margin-top:6px;color:#DFB743;font-size:11px}
-.section-highlight{
-  animation:pamaHighlight 1.6s ease;
-}
-@keyframes pamaHighlight{
-  0%{box-shadow:0 0 0 0 rgba(223,183,67,0)}
-  25%{box-shadow:0 0 0 5px rgba(223,183,67,.28)}
-  100%{box-shadow:0 0 0 0 rgba(223,183,67,0)}
-}
-.role-gate{
-  position:fixed;inset:0;z-index:200;background:rgba(41,70,65,.78);
-  backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;
-}
-.role-card{
-  width:min(460px,100%);background:#FFF9F0;border:1px solid rgba(201,168,94,.45);
-  border-radius:22px;padding:34px;box-shadow:0 30px 90px rgba(0,0,0,.25);text-align:center;
-}
-.role-card .eyebrow{color:#C9A85E!important}
-.role-card h2{margin:8px 0 8px;color:#294641!important}
-.role-card p{color:#46524F!important;margin:0 0 24px}
-.role-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.role-option{
-  border:1px solid rgba(55,91,87,.18);background:#FFF9F0;color:#294641;
-  border-radius:15px;padding:18px 12px;cursor:pointer;font-weight:600;
-}
-.role-option:hover{border-color:#C9A85E;box-shadow:0 8px 24px rgba(55,91,87,.08)}
-.role-option small{display:block;color:#596560;margin-top:6px;font-weight:400}
-@media(max-width:719px){
-  .role-control{margin-left:0}
-  .role-options{grid-template-columns:1fr}
-}
-</style>
-
-<style>
 /* ===== V5 FINAL LAYOUT FIX ===== */
 /* Culture: never create an orphan card or a fake blank cell. */
 .culture-grid{
@@ -1003,16 +956,40 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 @media (max-width:390px){
  .travel-table th,.travel-table td{font-size:13px!important;padding:12px 6px!important}
 }
-</style></head>
+</style>
+<style>
+/* V103: 修正福利區卡片內表格突出問題 */
+#benefit > .grid > .card > table{
+  width:100%!important;
+  min-width:0!important;
+  table-layout:fixed!important;
+}
+#benefit > .grid > .card > table th,
+#benefit > .grid > .card > table td{
+  min-width:0!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+}
+#benefit .benefit-note{
+  margin-top:18px!important;
+  padding:16px 18px!important;
+  border-left:3px solid var(--gold)!important;
+  background:var(--surface-soft)!important;
+  border-radius:0 8px 8px 0!important;
+}
+#benefit .welfare-other-grid{
+  align-items:stretch!important;
+}
+#benefit .welfare-other-grid .card{
+  height:100%;
+}
+</style>
+</head>
 <body>
 <header>
 <div class="nav">
 <div class="brand">PAMA HAIR SALON</div>
-<div class="role-control" aria-label="觀看權限">
-  <span>觀看權限</span>
-  <button id="roleAdmin" type="button">管理員</button>
-  <button id="roleEmployee" type="button">員工</button>
-</div>
+
 <nav class="navlinks">
 <a href="#culture">PAMA文化與品牌</a><a href="#work">工作規範</a><a href="#income">薪資抽成</a><a href="#leave">休假制度</a><a href="#benefit">員工福利</a><a href="#learning">教育培訓</a><a href="#privilege">員工優惠・服務</a><a href="#model">模特兒制度</a><a href="#admin">行政品質</a><a href="#contact">實用資訊</a>
 </nav>
@@ -1025,22 +1002,6 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </div>
 </header>
 
-<div class="role-gate hidden" id="roleGate" aria-modal="true" role="dialog">
-  <div class="role-card">
-    <div class="eyebrow">PAMA HAIR SALON · 1989</div>
-    <h2>帕瑪員工福利制度</h2>
-    <p>請選擇你的觀看權限。</p>
-    <div class="role-options">
-      <button class="role-option" data-role="admin" type="button">
-        管理員
-        <small>管理者觀看權限</small>
-      </button>
-      <button class="role-option" data-role="employee" type="button">
-        員工
-        <small>員工觀看權限</small>
-      </button>
-    </div>
-  </div>
 </div>
 <div class="overlay hidden" id="overlay"></div><div class="search-result hidden" id="searchResult"></div>
 <main>
@@ -1159,20 +1120,13 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="head"><div class="no">05</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M12 20s-7-4.5-9-8.6C1.4 8.2 3.4 5 6.5 5c2 0 3.5 1.2 4.5 3 1-1.8 2.5-3 4.5-3C18.6 5 20.6 8.2 19 11.4 17 15.5 12 20 12 20z"></path></svg><h2 class="title">員工福利・福利基金・旅遊</h2></div><div class="sub">福利金｜節慶｜保險｜員工旅遊</div></div></div>
 <div class="grid">
 <article class="card" data-search="生日 過年 中秋 結婚 喪事 福利"><h3>節慶福利</h3><table><tr><th>項目</th><th>福利</th></tr><tr><td>生日</td><td>$1,000</td></tr><tr><td>過年</td><td>$1,000</td></tr><tr><td>中秋</td><td>$1,000<br/><span class="small">月餅禮盒、PAMA紀念商品、公司烤肉或聚餐</span></td></tr><tr><td>結婚</td><td>$1,000</td></tr><tr><td>喪事</td><td>$1,100</td></tr></table></article>
-<article class="card" data-search="福利基金 150"><h3>福利基金</h3><p><strong>$150／月</strong><br/>每月繳交福利基金$150。</p></article>
+<article class="card" data-search="福利基金 150 使用說明 員工福利 教育 旅遊 活動"><h3>福利基金</h3><p><strong>$150／月</strong><br/>每月繳交福利基金$150。</p><div class="notice benefit-note"><strong>使用說明：</strong><br/>• 作為員工福利、教育、旅遊及活動經費。<br/>• 由公司統籌管理，專款專用。<br/>• 依公司公告之使用辦法執行。</div></article>
 <article class="card" data-search="職業災害保險"><h3>職業災害保險</h3><p>公司額外為員工加保職業災害保險。</p></article>
 </div>
-<div class="compact"><span class="tag">旅遊</span><h3>員工旅遊</h3></div><div class="table travel-table" data-search="員工旅遊 國內旅遊 補助 年資 5000 2500"><table><tr><th>到職年資</th><th>公司補助</th><th>員工自付</th></tr><tr><td>未滿半年</td><td>$0</td><td>$5,000</td></tr><tr><td>滿半年</td><td>$2,500</td><td>$2,500</td></tr><tr><td>滿一年</td><td>$5,000</td><td>$0</td></tr></table></div><div class="notice travel-note"><strong>備註</strong><br/>※ 員工若年資達到規定標準，公司將退還員工先行自繳的旅遊費用。<br>※ 國外旅遊補助方式與金額依當年度公司規劃及公告為準。</div><div class="subgroup-title">其他福利</div><div class="grid welfare-other-grid"><article class="card"><h3>春酒／感恩日</h3><p>依公司當年度規劃辦理。</p></article><article class="card"><h3>福利金制度</h3><p>新進人員工作滿半年以上享有福利金制度。</p></article><article class="card"><h3>新人實習週</h3><p>新進人員需一星期實習週；實習週通過者薪資以全薪發放；未滿一週不適任者無全薪。</p></article></div></section>
+<div class="compact"><span class="tag">旅遊</span><h3>員工旅遊</h3></div><div class="table travel-table" data-search="員工旅遊 國內旅遊 補助 年資 5000 2500"><table><tr><th>到職年資</th><th>公司補助</th><th>員工自付</th></tr><tr><td>未滿半年</td><td>$0</td><td>$5,000</td></tr><tr><td>滿半年</td><td>$2,500</td><td>$2,500</td></tr><tr><td>滿一年</td><td>$5,000</td><td>$0</td></tr></table></div><div class="notice travel-note"><strong>備註</strong><br/>※ 員工若年資達到規定標準，公司將退還員工先行自繳的旅遊費用。<br>※ 國外旅遊補助方式與金額依當年度公司規劃及公告為準。</div><div class="subgroup-title">其他福利</div><div class="grid welfare-other-grid"><article class="card" data-search="春酒 感恩日"><h3>春酒／感恩日</h3><p>依公司當年度規劃辦理。</p></article><article class="card" data-search="福利金制度 新進人員 半年"><h3>福利金制度</h3><p>新進人員工作滿半年以上享有福利金制度。</p></article><article class="card" data-search="新人 實習週 全薪"><h3>新人實習週</h3><ul><li>新進人員需一星期實習週。</li><li>實習週通過者薪資以全薪發放。</li><li>未滿一週不適任者無全薪。</li></ul></article><article class="card" data-search="員工產品福利 肯邦 7折 專案 8折 髮亞 5折 其他產品 店長 會計"><h3>員工產品福利</h3><ul><li>肯邦架上貨品：7折</li><li>配合專案產品：8折</li><li>髮亞產品：5折（成本價）</li></ul><p>員工提貨不計入店販抽成；設計師私人使用之貨品須購置福利品供自己使用；如查到自行販售，罰原價10倍。</p><div class="notice benefit-note"><strong>以上為大部分店家使用的產品優惠。</strong><br/>其他品牌產品亦有員工優惠，各品牌產品優惠另請洽詢店長及會計。</div></article><article class="card" data-search="員工親屬服務 直系親屬 7折 業績"><h3>員工親屬服務</h3><p>員工的<strong>直系親屬</strong>至帕瑪各分店消費，服務享<strong>7折優惠</strong>，並計入提供服務之設計師業績。</p><div class="notice benefit-note">適用範圍：員工直系親屬至帕瑪各分店消費。</div></article><article class="card" data-search="員工剪 燙 染 護 申請 跨店"><h3>員工剪・燙・染・護</h3><p>服務前須先填寫申請單，告知店長或行政後方可安排。跨店服務需簽呈並告知當店店長。</p></article></div></section>
 <section data-section="06 教育培訓與圓夢計畫" id="learning">
 <div class="head"><div class="no">06</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 5h16v14H4z"></path><path d="M8 9h8M8 13h6"></path></svg><h2 class="title">教育培訓・圓夢計畫</h2></div><div class="sub">圓夢設計師培訓｜課程評鑑｜新人服務流程</div></div></div>
 <div class="notice" data-search="圓夢課程 依學員人數 開課 評鑑 作業"><strong>圓夢課程｜依學員人數開課</strong><br/>圓夢課程依學員人數安排開課；各課程依規定完成上課、作業與評鑑，作為培訓進階與總審核依據。</div>
-<div class="compact"><span class="tag">新人文化</span><h3>新人培訓・精緻服務流程</h3></div>
-<div class="newbie-grid" style="margin-bottom:28px">
-<article><span>DAY 1</span><strong>帕瑪文化初衷</strong></article>
-<article><span>DAY 2</span><strong>毛髮理論／健康洗髮／顧客資料卡</strong></article>
-<article><span>DAY 3</span><strong>造型DIY／覺亞頭皮理論</strong></article>
-<article><span>DAY 4</span><strong>電話接待／店販與櫃台／京喚羽護髮</strong></article>
-</div>
 <div class="compact"><span class="tag">圓夢計畫</span><h3>圓夢設計師培訓計畫</h3></div>
 <div class="dream-grid dream-process">
 <article class="dream" data-search="圓夢 01 毛髮理論 服務接待"><div class="n">01</div><h3>毛髮理論／服務接待</h3><p>檢視接待、口語表達與服務流程，使助理在沙龍現場維持一致服務水平，建立精緻且舒適的服務流程。</p></article>
@@ -1187,14 +1141,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <article class="dream" data-search="圓夢 10 總審核"><div class="n">10</div><h3>總審核</h3><p>整合實戰、作品完成度與設計師專業形象。</p></article>
 </div>
 <div class="compact"><span class="tag">評鑑</span><h3>圓夢課程・評鑑方式</h3></div>
-<div class="table" data-search="課程 評鑑 考前作業 問卷 真人模特 現場考核 筆試">
-<table><tr><th>階段</th><th>內容</th><th>評鑑方式</th></tr>
-<tr><td>考前作業</td><td>依課程規定完成練習與指定作業</td><td>提交課程群組相簿／作業</td></tr>
-<tr><td>課程評鑑</td><td>模特造型、指定技術與筆試等</td><td>問卷考核、真人模特考核</td></tr>
-<tr><td>現場考核</td><td>依每月評鑑日進行實作</td><td>真人模特、指定造型與筆試</td></tr>
-</table>
-</div>
-<div class="notice">以上10項課程為同一套「圓夢設計師培訓計畫」，課程內容、上課要求、作業與評鑑方式皆屬本培訓制度的一部分。</div>
+<div class="notice" data-search="圓夢 評鑑 考核內容 每月 評鑑考核日 報名 店長 總管理處"><strong>每項圓夢評鑑考核皆有規定的考核內容。</strong><br/>各項圓夢評鑑依該項目所規定之考核內容進行考核。每月會安排圓夢評鑑考核日，有意參加者請向店長或總管理處報名。</div>
 <div class="compact"><span class="tag">教育資源</span><h3>社內教育・社外教育・教育基金</h3></div>
 <div class="grid education-resource-grid" style="margin-top:28px">
 <article class="card" data-search="社內教育 Kevin商業精剪班 帕瑪男士基礎剪髮 帕瑪女士基礎剪髮 帕瑪男士進階剪燙 帕瑪女士進階剪燙 新人精緻服務流程培訓 專業服務流程 月循環 月大會 UTOWA 彩妝 專業染髮 頂級護髮 每日早晚會 行政培訓 專案特訓 作品創作節">
@@ -1229,7 +1176,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <section data-section="07 員工優惠與員工服務" id="privilege">
 <div class="head"><div class="no">07</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 8h16v12H4z"></path><path d="M12 8v12M3 8h18M6 8c-2 0-2-5 1-5 2.5 0 4 5 5 5 1-1 2.5-5 5-5 3 0 3 5 1 5"></path></svg><h2 class="title">員工優惠・員工服務</h2></div><div class="sub">產品福利｜親屬優惠｜員工服務價目｜服務申請</div></div></div>
 <div class="grid">
-<article class="card" data-search="員工提貨 肯邦 7折 專案 8折 髮亞 5折"><h3>員工產品福利</h3><div class="table"><table><tr><th>產品類型</th><th>優惠</th></tr><tr><td>肯邦架上貨品</td><td>7折</td></tr><tr><td>配合專案產品</td><td>8折</td></tr><tr><td>髮亞產品</td><td>5折（成本價）</td></tr></table></div><p>員工提貨不計入店販抽成；設計師私人使用之貨品須購置福利品供自己使用；如查到自行販售，罰原價10倍。</p></article>
+<article class="card" data-search="員工提貨 肯邦 7折 專案 8折 髮亞 5折"><h3>員工產品福利</h3><div class="table"><table><tr><th>產品類型</th><th>優惠</th></tr><tr><td>肯邦架上貨品</td><td>7折</td></tr><tr><td>配合專案產品</td><td>8折</td></tr><tr><td>髮亞產品</td><td>5折（成本價）</td></tr></table></div><p>員工提貨不計入店販抽成；設計師私人使用之貨品須購置福利品供自己使用；如查到自行販售，罰原價10倍。</p><div class="notice benefit-note"><strong>以上為大部分店家使用的產品優惠。</strong><br/>其他品牌產品亦有員工優惠，各品牌產品優惠另請洽詢店長及會計。</div></article>
 <article class="card" data-search="直系親屬 7折 各分店 業績"><h3>員工親屬服務</h3><p>員工的<strong>直系親屬</strong>至帕瑪各分店消費，服務享<strong>7折優惠</strong>，並計入提供服務之設計師業績。</p><div class="notice">適用範圍：員工直系親屬至帕瑪各分店消費。</div></article>
 <article class="card" data-search="員工剪 燙 染 護 申請 跨店"><h3>員工剪・燙・染・護</h3><p>服務前須先填寫申請單，告知店長或行政後方可安排。跨店服務需簽呈並告知當店店長。</p></article>
 </div>
@@ -1330,28 +1277,6 @@ searchInput.addEventListener('keydown',e=>{
   if(e.key==='Escape'){searchInput.value='';closeSearch()}
 });
 overlay.addEventListener('click',closeSearch);
-
-/* ===== Viewing permission: Admin / Employee =====
-   This static page only remembers the selected viewing role in the browser.
-   Real authentication/authorization must be enforced by the hosting backend.
-*/
-const roleGate=document.getElementById('roleGate');
-const roleAdmin=document.getElementById('roleAdmin');
-const roleEmployee=document.getElementById('roleEmployee');
-const roleButtons=[...document.querySelectorAll('.role-option')];
-function setRole(role){
-  localStorage.setItem('pamaViewingRole',role);
-  roleGate.classList.add('hidden');
-  roleAdmin.classList.toggle('active',role==='admin');
-  roleEmployee.classList.toggle('active',role==='employee');
-}
-function openRoleGate(){roleGate.classList.remove('hidden')}
-roleButtons.forEach(btn=>btn.addEventListener('click',()=>setRole(btn.dataset.role)));
-roleAdmin.addEventListener('click',openRoleGate);
-roleEmployee.addEventListener('click',openRoleGate);
-const savedRole=localStorage.getItem('pamaViewingRole');
-if(savedRole==='admin'||savedRole==='employee') setRole(savedRole);
-else openRoleGate();
 
 const role=document.getElementById('role'),years=document.getElementById('years'),perf=document.getElementById('perf'),leaveResult=document.getElementById('leaveResult');
 function calcLeave(){let y=Math.max(0,Number(years.value)||0),r=role.value,p=Number(perf.value)||0;if(r==='assistant'){let base=y>=1?7:0;leaveResult.innerHTML=`<span>助理／行政</span><br><b>${base} 天</b><div class="small">年資滿1年以上享有特休7天。</div>`;return}let base=y<1?0:y<5?7:y<10?10:Math.min(30,10+(y-10));leaveResult.innerHTML=`<span>設計師｜年資特休 ${base} 天 + 業績特休 ${p} 天</span><br><b>合計 ${base+p} 天</b><div class="small">年資特休與業績特休可同時享有並往上累加。</div>`}
