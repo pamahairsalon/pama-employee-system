@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V104</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V106</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -872,6 +872,209 @@ img,svg,video{max-width:100%;height:auto}
 }
 /* Remove accidental empty-looking height from all cards. */
 .grid,.dream-grid,.store-grid,.vendor-grid,.dream-salary-steps{align-items:stretch!important;}
+
+/* ===== V106: clean expandable category menu + always-visible TOP button ===== */
+.nav{
+  position:relative!important;
+}
+.navlinks{
+  display:none!important;
+}
+.category-menu-wrap{
+  position:absolute!important;
+  top:50%!important;
+  right:34px!important;
+  transform:translateY(-50%)!important;
+  z-index:130!important;
+}
+.category-menu-toggle{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:9px!important;
+  height:38px!important;
+  padding:0 14px!important;
+  border:1px solid rgba(223,183,67,.50)!important;
+  border-radius:999px!important;
+  background:rgba(255,246,233,.07)!important;
+  color:#FFF6E9!important;
+  cursor:pointer!important;
+  font-size:12px!important;
+  letter-spacing:.04em!important;
+  line-height:1!important;
+  transition:.18s ease!important;
+}
+.category-menu-toggle:hover,
+.category-menu-toggle[aria-expanded="true"]{
+  background:#DFB743!important;
+  color:#294641!important;
+  border-color:#DFB743!important;
+}
+.menu-icon{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  gap:3px!important;
+  width:14px!important;
+  height:14px!important;
+}
+.menu-icon i{
+  display:block!important;
+  width:14px!important;
+  height:1.5px!important;
+  margin:0!important;
+  background:currentColor!important;
+  border-radius:2px!important;
+}
+.category-menu{
+  position:absolute!important;
+  top:calc(100% + 10px)!important;
+  right:0!important;
+  width:300px!important;
+  padding:10px!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:7px!important;
+  background:#FFF9F0!important;
+  border:1px solid rgba(201,168,94,.40)!important;
+  border-radius:14px!important;
+  box-shadow:0 20px 55px rgba(36,63,60,.22)!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transform:translateY(-5px)!important;
+  transition:opacity .16s ease,transform .16s ease,visibility .16s ease!important;
+}
+.category-menu.open{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translateY(0)!important;
+}
+.category-menu a{
+  display:flex!important;
+  align-items:center!important;
+  min-height:40px!important;
+  padding:8px 10px!important;
+  border:1px solid rgba(55,91,87,.10)!important;
+  border-radius:9px!important;
+  background:#FBF6ED!important;
+  color:#294641!important;
+  font-size:12px!important;
+  line-height:1.3!important;
+  white-space:normal!important;
+}
+.category-menu a:hover{
+  background:rgba(223,183,67,.15)!important;
+  border-color:rgba(201,168,94,.45)!important;
+}
+.back-to-top{
+  position:fixed!important;
+  right:18px!important;
+  bottom:18px!important;
+  z-index:180!important;
+  width:50px!important;
+  height:50px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:1px!important;
+  border:1px solid rgba(223,183,67,.55)!important;
+  border-radius:50%!important;
+  background:rgba(55,91,87,.96)!important;
+  color:#FFF6E9!important;
+  box-shadow:0 10px 30px rgba(36,63,60,.24)!important;
+  cursor:pointer!important;
+  opacity:1!important;
+  visibility:visible!important;
+  transform:none!important;
+  transition:transform .18s ease,background .18s ease!important;
+}
+.back-to-top:hover{
+  background:#294641!important;
+  transform:translateY(-2px)!important;
+}
+.back-to-top span{
+  display:block!important;
+  font-size:20px!important;
+  line-height:1!important;
+}
+.back-to-top small{
+  display:block!important;
+  font:8px Arial,sans-serif!important;
+  letter-spacing:.12em!important;
+  line-height:1!important;
+  color:#DFB743!important;
+}
+section[id]{
+  scroll-margin-top:120px!important;
+}
+
+@media(max-width:980px){
+  .nav{
+    padding-left:22px!important;
+    padding-right:22px!important;
+    min-height:56px!important;
+  }
+  .category-menu-wrap{
+    right:22px!important;
+  }
+}
+@media(max-width:719px){
+  .nav{
+    padding:11px 15px!important;
+    min-height:54px!important;
+  }
+  .brand{
+    font-size:12px!important;
+    letter-spacing:.22em!important;
+    padding-right:100px!important;
+  }
+  .category-menu-wrap{
+    right:15px!important;
+    top:50%!important;
+  }
+  .category-menu-toggle{
+    height:34px!important;
+    padding:0 11px!important;
+    gap:7px!important;
+    font-size:11px!important;
+  }
+  .category-menu{
+    position:fixed!important;
+    top:58px!important;
+    right:12px!important;
+    width:min(300px,calc(100vw - 24px))!important;
+    max-height:calc(100vh - 80px)!important;
+    overflow:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  .category-menu a{
+    min-height:38px!important;
+    font-size:11px!important;
+  }
+  .back-to-top{
+    right:14px!important;
+    bottom:14px!important;
+    width:48px!important;
+    height:48px!important;
+  }
+}
+@media(max-width:390px){
+  .brand{
+    font-size:11px!important;
+    padding-right:95px!important;
+  }
+  .category-menu-toggle{
+    padding:0 9px!important;
+    font-size:10px!important;
+  }
+  .category-menu{
+    grid-template-columns:1fr 1fr!important;
+  }
+}
+
 </style>
 <style>
 /* ================= PAMA V100 — FINAL SELF-OPTIMIZATION PASS ================= */
@@ -983,12 +1186,72 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 #benefit .welfare-other-grid .card{
   height:100%;
 }
+
+/* ===== PAMA Mobile Category Navigation + Hero Cleanup ===== */
+.mobile-category-nav{display:none}
+@media (min-width:720px){
+  .hero-side .mini{display:none!important;}
+  .since{font-size:110px!important;line-height:.86!important;}
+  .hero-side .caption{margin-top:28px!important;}
+}
+@media (max-width:719px){
+  .mobile-category-nav{
+    display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;
+    padding:8px 16px 10px;background:#375B57;
+    border-top:1px solid rgba(255,246,233,.08);
+    border-bottom:1px solid rgba(223,183,67,.28);
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .mobile-category-nav::-webkit-scrollbar{display:none}
+  .mobile-category-nav a{
+    flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+    min-width:50px;height:34px;padding:0 13px;
+    border:1px solid rgba(255,246,233,.28);border-radius:999px;
+    background:rgba(255,246,233,.07);color:#FFF6E9;
+    font-size:12px;line-height:1;white-space:nowrap;
+  }
+  .mobile-category-nav a:active{background:#DFB743;color:#294641;border-color:#DFB743}
+  .hero{padding-top:40px!important;padding-bottom:38px!important;min-height:auto!important;gap:26px!important;}
+  .hero h1{font-size:clamp(40px,11vw,54px)!important;line-height:1.05!important;margin-bottom:18px!important;}
+  .hero p{font-size:15px!important;line-height:1.8!important;}
+  .hero-side{display:flex!important;align-items:center!important;gap:14px!important;border:0!important;padding:0!important;}
+  .since{font-size:58px!important;line-height:1!important;letter-spacing:.01em!important;}
+  .hero-side .caption{margin:0!important;font-size:10px!important;line-height:1.5!important;letter-spacing:.05em!important;color:rgba(255,246,233,.72)!important;}
+  .hero-side .mini{display:none!important;}
+}
+@media(max-width:390px){
+  .mobile-category-nav{padding-left:12px;padding-right:12px}
+  .mobile-category-nav a{min-width:46px;padding:0 10px;font-size:11px}
+  .since{font-size:50px!important}
+  .hero-side{gap:10px!important}
+  .hero-side .caption{font-size:9px!important}
+}
 </style>
 </head>
 <body>
 <header>
 <div class="nav">
 <div class="brand">PAMA HAIR SALON</div>
+<div class="category-menu-wrap">
+  <button class="category-menu-toggle" id="categoryMenuToggle" type="button"
+          aria-expanded="false" aria-controls="categoryMenu">
+    <span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span>制度分類</span>
+  </button>
+  <nav class="category-menu" id="categoryMenu" aria-label="制度分類選單">
+    <a href="#culture">01　文化與品牌</a>
+    <a href="#work">02　工作規範</a>
+    <a href="#income">03　薪資抽成</a>
+    <a href="#leave">04　休假制度</a>
+    <a href="#benefit">05　員工福利</a>
+    <a href="#learning">06　教育培訓</a>
+    <a href="#privilege">07　員工優惠</a>
+    <a href="#model">08　模特兒制度</a>
+    <a href="#admin">09　行政人事</a>
+    <a href="#contact">10　實用資訊</a>
+  </nav>
+</div>
+
 
 <nav class="navlinks">
 <a href="#culture">PAMA文化與品牌</a><a href="#work">工作規範</a><a href="#income">薪資抽成</a><a href="#leave">休假制度</a><a href="#benefit">員工福利</a><a href="#learning">教育培訓</a><a href="#privilege">員工優惠・服務</a><a href="#model">模特兒制度</a><a href="#admin">行政品質</a><a href="#contact">實用資訊</a>
@@ -1001,6 +1264,12 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </div>
 </div>
 </header>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="回到最上方" title="回到最上方">
+  <span aria-hidden="true">↑</span>
+  <small>TOP</small>
+</button>
+
 
 </div>
 <div class="overlay hidden" id="overlay"></div><div class="search-result hidden" id="searchResult"></div>
@@ -1281,5 +1550,65 @@ overlay.addEventListener('click',closeSearch);
 const role=document.getElementById('role'),years=document.getElementById('years'),perf=document.getElementById('perf'),leaveResult=document.getElementById('leaveResult');
 function calcLeave(){let y=Math.max(0,Number(years.value)||0),r=role.value,p=Number(perf.value)||0;if(r==='assistant'){let base=y>=1?7:0;leaveResult.innerHTML=`<span>助理／行政</span><br><b>${base} 天</b><div class="small">年資滿1年以上享有特休7天。</div>`;return}let base=y<1?0:y<5?7:y<10?10:Math.min(30,10+(y-10));leaveResult.innerHTML=`<span>設計師｜年資特休 ${base} 天 + 業績特休 ${p} 天</span><br><b>合計 ${base+p} 天</b><div class="small">年資特休與業績特休可同時享有並往上累加。</div>`}
 [role,years,perf].forEach(el=>el.addEventListener('input',calcLeave));calcLeave();
+
+
+
+/* ===== V106: category menu + TOP behavior ===== */
+const categoryMenuToggle = document.getElementById('categoryMenuToggle');
+const categoryMenu = document.getElementById('categoryMenu');
+const backToTop = document.getElementById('backToTop');
+
+function closeCategoryMenu(){
+  if(!categoryMenu || !categoryMenuToggle) return;
+  categoryMenu.classList.remove('open');
+  categoryMenuToggle.setAttribute('aria-expanded','false');
+}
+
+function scrollToSection(target){
+  const header = document.querySelector('header');
+  const headerHeight = header ? header.getBoundingClientRect().height : 0;
+  const y = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+  window.scrollTo({top:Math.max(0,y), behavior:'smooth'});
+}
+
+if(categoryMenuToggle && categoryMenu){
+  categoryMenuToggle.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const willOpen = !categoryMenu.classList.contains('open');
+    categoryMenu.classList.toggle('open', willOpen);
+    categoryMenuToggle.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  categoryMenu.addEventListener('click', (e)=>{
+    const link = e.target.closest('a[href^="#"]');
+    if(!link) return;
+    const id = link.getAttribute('href');
+    const target = document.querySelector(id);
+    closeCategoryMenu();
+    if(target){
+      e.preventDefault();
+      scrollToSection(target);
+      history.replaceState(null,'',id);
+    }
+  });
+
+  document.addEventListener('click', (e)=>{
+    if(!categoryMenu.contains(e.target) && !categoryMenuToggle.contains(e.target)){
+      closeCategoryMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape') closeCategoryMenu();
+  });
+}
+
+if(backToTop){
+  backToTop.addEventListener('click', ()=>{
+    closeCategoryMenu();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+}
+
 </script>
 </body></html>
