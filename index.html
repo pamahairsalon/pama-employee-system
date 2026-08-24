@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V107</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V109</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -1075,6 +1075,159 @@ section[id]{
   }
 }
 
+
+/* ===== V108: special commission / assistance points ===== */
+.special-pay-block{
+  margin-top:58px;
+  padding-top:45px;
+  border-top:1px solid rgba(201,170,104,.42);
+}
+.special-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.special-grid-2{
+  margin-top:8px;
+}
+.special-card{
+  background:rgba(255,250,241,.92);
+  border:1px solid var(--line);
+  padding:24px;
+  min-width:0;
+}
+.special-card-wide{
+  grid-column:1 / -1;
+}
+.special-card-title{
+  font-size:20px;
+  font-weight:500;
+  color:var(--green-deep);
+  margin-bottom:15px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--line-gold);
+}
+.special-card p{
+  color:#5f6a67;
+  font-size:14px;
+  line-height:1.9;
+  margin:0 0 12px;
+}
+.special-card .table{
+  border-color:var(--line);
+}
+.special-card .table table{
+  min-width:0;
+}
+.special-card th{
+  background:var(--green);
+  color:var(--cream);
+}
+.special-card td{
+  color:#505b58;
+}
+.special-card .formula{
+  margin-top:16px;
+  padding:15px 17px;
+  background:rgba(55,91,87,.055);
+  border-left:2px solid var(--gold);
+  color:#5f6a67;
+  font-size:13px;
+  line-height:2;
+}
+.special-card .formula strong{
+  color:var(--green-deep);
+}
+.key-tech-table th{
+  text-align:center;
+}
+.key-tech-table td{
+  text-align:center;
+}
+.key-tech-table td:first-child{
+  text-align:left;
+}
+@media(max-width:719px){
+  .special-pay-block{
+    margin-top:42px;
+    padding-top:32px;
+  }
+  .special-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .special-card-wide{
+    grid-column:auto;
+  }
+  .special-card{
+    padding:18px;
+  }
+  .special-card-title{
+    font-size:18px;
+  }
+  .special-card .table{
+    overflow-x:auto;
+  }
+  .special-card .formula{
+    font-size:12px;
+  }
+}
+
+
+/* ===== V109: Dream assessment external reference link ===== */
+.dream-assessment-link{
+  margin:20px 0 8px;
+}
+.dream-assessment-link a{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  width:max-content;
+  max-width:100%;
+  padding:12px 18px;
+  border:1px solid rgba(202,168,95,.48);
+  border-radius:999px;
+  background:rgba(255,246,233,.78);
+  color:var(--green-deep);
+  box-shadow:0 8px 24px rgba(36,63,60,.06);
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.dream-assessment-link a:hover{
+  transform:translateY(-1px);
+  background:#fffaf1;
+  box-shadow:0 12px 28px rgba(36,63,60,.10);
+}
+.dream-link-icon{
+  width:30px;
+  height:30px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--green);
+  color:var(--cream);
+  font:17px Arial,sans-serif;
+}
+.dream-assessment-link strong{
+  display:block;
+  font-size:14px;
+  font-weight:600;
+}
+.dream-assessment-link small{
+  display:block;
+  margin-top:1px;
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.03em;
+}
+@media(max-width:719px){
+  .dream-assessment-link a{
+    width:100%;
+    border-radius:12px;
+    padding:11px 14px;
+  }
+}
+
 </style>
 <style>
 /* ================= PAMA V100 — FINAL SELF-OPTIMIZATION PASS ================= */
@@ -1379,6 +1532,136 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="table" data-search="店販抽成 15 20 25"><table><tr><th>店販業績</th><th>抽成</th></tr><tr><td>$0～99,999</td><td>15%</td></tr><tr><td>$100,000～149,999</td><td>20%</td></tr><tr><td>$150,000以上</td><td>25%</td></tr></table></div>
 </div>
 </section>
+
+<div class="special-pay-block">
+
+  <div class="compact"><span class="tag">特殊制度</span><h3>協助點數制度</h3></div>
+
+  <div class="notice" data-search="協助點數 20元 1點 設計師 實收 發帳">
+    <strong>20 元為一個單位（1 點）</strong><br/>
+    協助點數依實際協助項目計算；以下內容為各項服務對應點數。
+  </div>
+
+  <div class="special-grid">
+    <div class="special-card">
+      <div class="special-card-title">染（不含洗）</div>
+      <div class="table">
+        <table>
+          <tr><th>項目</th><th>短</th><th>中</th><th>長</th></tr>
+          <tr><td>全頭</td><td>2</td><td>3</td><td>4</td></tr>
+          <tr><td>漂髮</td><td>2</td><td>3</td><td>4</td></tr>
+          <tr><td>補髮根</td><td>2</td><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="special-card">
+      <div class="special-card-title">護（不含洗）</div>
+      <div class="table">
+        <table>
+          <tr><th>項目</th><th>點數</th></tr>
+          <tr><td>HPS</td><td>5</td></tr>
+          <tr><td>IAU</td><td>5</td></tr>
+          <tr><td>京喚羽</td><td>5</td></tr>
+          <tr><td>女神</td><td>5</td></tr>
+          <tr><td>馭髮道</td><td>5</td></tr>
+          <tr><td>AWG</td><td>2</td></tr>
+          <tr><td>鉑金</td><td>2</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="special-card">
+      <div class="special-card-title">燙（不含洗）</div>
+      <div class="table">
+        <table>
+          <tr><th>項目</th><th>1劑</th><th>2劑</th><th>夾直</th><th>全程</th></tr>
+          <tr><td>冷燙</td><td>1</td><td>1</td><td></td><td></td></tr>
+          <tr><td>熱塑</td><td>2</td><td>2</td><td></td><td></td></tr>
+          <tr><td>燙直</td><td>2</td><td>2</td><td>7</td><td>13</td></tr>
+          <tr><td>壓趟</td><td>1</td><td>1</td><td></td><td></td></tr>
+          <tr><td>潤海</td><td>X</td><td>X</td><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="special-card">
+      <div class="special-card-title">頭皮</div>
+      <div class="table">
+        <table>
+          <tr><th>項目</th><th>點數</th></tr>
+          <tr><td>頭皮酵素</td><td>1</td></tr>
+          <tr><td>淨化</td><td>X</td></tr>
+          <tr><td>頭膜</td><td>1</td></tr>
+          <tr><td>安瓶＋頭皮霧化儀</td><td>1</td></tr>
+          <tr><td>T3</td><td>2</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="special-card special-card-wide">
+      <div class="special-card-title">其他</div>
+      <div class="table">
+        <table>
+          <tr><th>項目</th><th>點數</th></tr>
+          <tr><td>洗</td><td>2</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>帳務備註</strong><br/>
+    ※ 設計師以實收做為發帳，如消費者所欠現金，當天設計師應補足。
+  </div>
+
+  <div class="compact"><span class="tag">特殊抽成</span><h3>增毛、假髮片抽成</h3></div>
+
+  <div class="special-grid special-grid-2">
+    <article class="special-card">
+      <div class="special-card-title">增毛</div>
+      <p><strong>抽成：</strong>售價（1根20元）－成本（售價×0.25）→ 設計師60%：店家40%</p>
+      <div class="formula">
+        <div>例：500根×20＝<strong>10,000</strong></div>
+        <div>10,000－(10,000×0.25)＝<strong>7,500</strong></div>
+        <div>設計師 7,500×0.6＝<strong>4,500</strong></div>
+        <div>店家 7,500×0.4＝<strong>3,000</strong></div>
+      </div>
+    </article>
+
+    <article class="special-card">
+      <div class="special-card-title">假髮片</div>
+      <p><strong>售價是成本的3倍</strong></p>
+      <p><strong>抽成：</strong>售價－成本 → 設計師60%：店家40%</p>
+      <div class="formula">
+        <div>例：12,000×3＝<strong>36,000</strong></div>
+        <div>36,000－12,000＝<strong>24,000</strong></div>
+        <div>設計師 24,000×0.6＝<strong>14,400</strong></div>
+        <div>店家 24,000×0.4＝<strong>9,600</strong></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="compact"><span class="tag">KEY 技術</span><h3>假髮片・燙・染 Key 技術抽成</h3></div>
+
+  <div class="table" data-search="假髮片 燙 染 Key 技術抽成 髮片 5×8 7×10 8×12 9×14 12×14 13×15 14×16 15×17 16×18">
+    <table class="key-tech-table">
+      <tr><th>髮片</th><th>染</th><th>燙</th><th>漂</th></tr>
+      <tr><td>5×8</td><td>1,000</td><td>1,500</td><td>1,000</td></tr>
+      <tr><td>7×10<br/>8×12</td><td>1,500</td><td>2,000</td><td>1,500</td></tr>
+      <tr><td>9×14<br/>12×14</td><td>2,000</td><td>2,500</td><td>2,000</td></tr>
+      <tr><td>13×15<br/>14×16</td><td>2,500</td><td>3,000</td><td>2,500</td></tr>
+      <tr><td>15×17<br/>16×18</td><td>3,000</td><td>3,500</td><td>3,000</td></tr>
+    </table>
+  </div>
+
+  <div class="notice">
+    <strong>※ 內容依你提供的三張參考圖整理。</strong><br/>
+    表格中的尺寸組合與金額依原圖呈現方式保留。
+  </div>
+
+</div>
+
 <section data-section="04 休假制度" id="leave">
 <div class="head"><div class="no">04</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><rect height="15" rx="1" width="16" x="4" y="5"></rect><path d="M8 3v4M16 3v4M4 9h16"></path></svg><h2 class="title">休假制度</h2></div><div class="sub">排休｜輪休｜特休｜事假｜病假｜婚假｜喪假｜公假</div></div></div>
 <div class="grid">
@@ -1446,6 +1729,15 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </div>
 <div class="compact"><span class="tag">評鑑</span><h3>圓夢課程・評鑑方式</h3></div>
 <div class="notice" data-search="圓夢 評鑑 考核內容 每月 評鑑考核日 報名 店長 總管理處"><strong>每項圓夢評鑑考核皆有規定的考核內容。</strong><br/>各項圓夢評鑑依該項目所規定之考核內容進行考核。每月會安排圓夢評鑑考核日，有意參加者請向店長或總管理處報名。</div>
+<div class="dream-assessment-link">
+  <a href="https://drive.google.com/drive/folders/1-bcau2iCMlgaRMBDTx5Ouqz7VoD_9kZS?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <span class="dream-link-icon" aria-hidden="true">↗</span>
+    <span>
+      <strong>查看帕瑪圓夢評鑑考核</strong>
+      <small>考核內容・評分標準・相關資料</small>
+    </span>
+  </a>
+</div>
 <div class="compact"><span class="tag">教育資源</span><h3>社內教育・社外教育・教育基金</h3></div>
 <div class="grid education-resource-grid" style="margin-top:28px">
 <article class="card" data-search="社內教育 Kevin商業精剪班 帕瑪男士基礎剪髮 帕瑪女士基礎剪髮 帕瑪男士進階剪燙 帕瑪女士進階剪燙 新人精緻服務流程培訓 專業服務流程 月循環 月大會 UTOWA 彩妝 專業染髮 頂級護髮 每日早晚會 行政培訓 專案特訓 作品創作節">
