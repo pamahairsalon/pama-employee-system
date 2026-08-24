@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V106</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V107</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -1227,6 +1227,19 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
   .hero-side .caption{font-size:9px!important}
 }
 </style>
+
+<style>
+/* ===== V107: designer leave calculator only ===== */
+.designer-leave-tool-grid{
+  grid-template-columns:1fr 1.5fr!important;
+}
+@media(max-width:719px){
+  .designer-leave-tool-grid{
+    grid-template-columns:1fr!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -1379,10 +1392,32 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="compact"><span class="tag">業績</span><h3>業績特休</h3></div>
 <div class="table" data-search="業績特休 100000 150000 200000 250000 300000"><table><tr><th>平均一年技術業績</th><th>額外特休</th></tr><tr><td>$100,000以上</td><td>1天</td></tr><tr><td>$150,000以上</td><td>3天</td></tr><tr><td>$200,000以上</td><td>4天</td></tr><tr><td>$250,000以上</td><td>5天</td></tr><tr><td>$300,000以上</td><td>6天</td></tr></table></div>
 <div class="notice"><strong>特休合併計算</strong><br/>年資特休＋業績特休，可同時享有並往上累加。例如：年資特休7天＋業績特休3天＝共10天。助理年資滿1年以上，享有特休7天。</div>
-<div class="tool" data-search="特休試算 特休小工具 年資 業績">
-<div class="tool-head"><div><h3>特休試算</h3><div class="small">依本頁所載制度快速估算可享有的特休天數</div></div></div>
-<div class="tool-grid"><div class="field"><label>身分</label><select id="role"><option value="designer">設計師</option><option value="assistant">助理／行政</option></select></div><div class="field"><label>年資</label><input id="years" max="30" min="0" type="number" value="1"/></div><div class="field"><label>業績特休級距</label><select id="perf"><option value="0">未達 $100,000</option><option value="1">$100,000以上｜+1天</option><option value="3">$150,000以上｜+3天</option><option value="4">$200,000以上｜+4天</option><option value="5">$250,000以上｜+5天</option><option value="6">$300,000以上｜+6天</option></select></div></div>
-<div class="result" id="leaveResult"></div></div>
+<div class="tool" data-search="設計師 特休試算 特休小工具 年資 業績">
+<div class="tool-head">
+  <div>
+    <h3>設計師特休試算</h3>
+    <div class="small">僅計算設計師的「年資特休＋業績特休」</div>
+  </div>
+</div>
+<div class="tool-grid designer-leave-tool-grid">
+  <div class="field">
+    <label>設計師年資</label>
+    <input id="years" max="30" min="0" step="1" type="number" value="1"/>
+  </div>
+  <div class="field">
+    <label>平均一年技術業績</label>
+    <select id="perf">
+      <option value="0">未達 $100,000</option>
+      <option value="1">$100,000以上｜+1天</option>
+      <option value="3">$150,000以上｜+3天</option>
+      <option value="4">$200,000以上｜+4天</option>
+      <option value="5">$250,000以上｜+5天</option>
+      <option value="6">$300,000以上｜+6天</option>
+    </select>
+  </div>
+</div>
+<div class="result" id="leaveResult"></div>
+</div>
 <div class="compact"><span class="tag">請假</span><h3>事假・病假・婚假・喪假・天災與公假</h3></div><div class="accordion"><details><summary>事假 <span class="plus">＋</span></summary><div class="detail">半天（5小時以內）$500；一般1日$1,000；假日1日$2,000。保障底薪制：底薪÷當月天數＝每日扣薪金額。原則上需事先申請；臨時狀況須告知店長原因並經批准。</div></details><details><summary>病假 <span class="plus">＋</span></summary><div class="detail">須於上班時間前告知店長；病假後一日提供掛號單或收據；未提供證明以事假扣款方式計算。保障底薪制者給假不給薪；病假遇假日扣一天；設計師一年病假6天，上、下半年各3天；超過額度以事假論；重大傷病個案另行處理。</div></details><details><summary>婚假 <span class="plus">＋</span></summary><div class="detail">員工結婚可請7天；以喜帖作為請假依據；可跨週、跨月、連休或分段休；不扣全勤獎金。</div></details><details><summary>喪假 <span class="plus">＋</span></summary><div class="detail"><div class="table"><table><tr><th>親屬關係</th><th>喪假日數</th></tr><tr><td>父母、養父母、配偶</td><td>8天</td></tr><tr><td>祖父母、外祖父母、子女、配偶父母、配偶養父母</td><td>6天</td></tr><tr><td>曾祖父母、兄弟姊妹、配偶祖父母</td><td>3天</td></tr></table></div><p>應檢附訃聞影本，自死亡日起計算，百日內請完；因傳統禮俗可申請分次給假。非直系親屬需請事假，遇假日扣一天。符合規定者不得扣全勤獎金。</p></div></details><details><summary>天災與公假 <span class="plus">＋</span></summary><div class="detail">助理、行政、設計師保障底薪人員：公司給假不給薪，有全勤；設計師因天災不扣全勤。可申請公假：國防部點閱／教育召集、代表店家參加國內外美髮競賽、代表店家參加國外進修（特別指派）。</div></details><details><summary>國定假日與節慶出勤 <span class="plus">＋</span></summary><div class="detail">國定假日不休；如需休假，需排休或請假。元旦1/1中午12:00上班；中秋、端午17:00下班；清明節掃墓扣一天假，其餘節慶請假扣二天。</div></details></div>
 </section>
 <section data-section="05 員工福利" id="benefit">
@@ -1547,10 +1582,29 @@ searchInput.addEventListener('keydown',e=>{
 });
 overlay.addEventListener('click',closeSearch);
 
-const role=document.getElementById('role'),years=document.getElementById('years'),perf=document.getElementById('perf'),leaveResult=document.getElementById('leaveResult');
-function calcLeave(){let y=Math.max(0,Number(years.value)||0),r=role.value,p=Number(perf.value)||0;if(r==='assistant'){let base=y>=1?7:0;leaveResult.innerHTML=`<span>助理／行政</span><br><b>${base} 天</b><div class="small">年資滿1年以上享有特休7天。</div>`;return}let base=y<1?0:y<5?7:y<10?10:Math.min(30,10+(y-10));leaveResult.innerHTML=`<span>設計師｜年資特休 ${base} 天 + 業績特休 ${p} 天</span><br><b>合計 ${base+p} 天</b><div class="small">年資特休與業績特休可同時享有並往上累加。</div>`}
-[role,years,perf].forEach(el=>el.addEventListener('input',calcLeave));calcLeave();
+const years=document.getElementById('years');
+const perf=document.getElementById('perf');
+const leaveResult=document.getElementById('leaveResult');
 
+function calcLeave(){
+  const y=Math.max(0,Number(years.value)||0);
+  const p=Number(perf.value)||0;
+
+  let base=0;
+  if(y>=1 && y<5) base=7;
+  else if(y>=5 && y<10) base=10;
+  else if(y>=10) base=Math.min(30,10+(y-10));
+
+  const total=base+p;
+
+  leaveResult.innerHTML=
+    `<span>設計師｜年資特休 ${base} 天 ＋ 業績特休 ${p} 天</span><br>
+     <b>合計 ${total} 天</b>
+     <div class="small">年資特休＋業績特休可同時享有並往上累加。</div>`;
+}
+
+[years,perf].forEach(el=>el.addEventListener('input',calcLeave));
+calcLeave();
 
 
 /* ===== V106: category menu + TOP behavior ===== */
