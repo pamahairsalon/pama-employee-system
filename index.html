@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V116</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V120</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -1698,6 +1698,149 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 }
 </style>
 
+
+<style>
+/* ===== V120: vendor mobile layout — rebuilt as full-width cards ===== */
+@media (max-width:719px){
+  .vendor-directory{
+    width:100%!important;
+    max-width:100%!important;
+    overflow:visible!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+  }
+
+  .vendor-directory table{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    border:0!important;
+    border-collapse:separate!important;
+    border-spacing:0!important;
+    table-layout:auto!important;
+    background:transparent!important;
+  }
+
+  .vendor-directory thead{
+    display:none!important;
+  }
+
+  .vendor-directory tbody{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:12px!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+
+  .vendor-directory tr{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    box-sizing:border-box!important;
+    border:1px solid rgba(55,91,87,.14)!important;
+    border-radius:14px!important;
+    overflow:hidden!important;
+    background:#fffaf2!important;
+    box-shadow:0 3px 12px rgba(40,55,52,.05)!important;
+  }
+
+  /* Every cell becomes a compact row: label + value. */
+  .vendor-directory td,
+  .vendor-directory td[data-label]{
+    display:grid!important;
+    grid-template-columns:78px minmax(0,1fr)!important;
+    gap:0!important;
+    align-items:center!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    min-height:40px!important;
+    height:auto!important;
+    margin:0!important;
+    padding:8px 12px!important;
+    box-sizing:border-box!important;
+    border:0!important;
+    border-bottom:1px solid rgba(55,91,87,.08)!important;
+    background:transparent!important;
+    text-align:left!important;
+    vertical-align:middle!important;
+    line-height:1.45!important;
+    white-space:normal!important;
+  }
+
+  .vendor-directory td:last-child{
+    border-bottom:0!important;
+  }
+
+  .vendor-directory td::before{
+    content:attr(data-label)!important;
+    display:block!important;
+    width:78px!important;
+    min-width:0!important;
+    padding-right:8px!important;
+    box-sizing:border-box!important;
+    color:#7c827f!important;
+    font-size:11px!important;
+    font-weight:400!important;
+    line-height:1.35!important;
+    white-space:nowrap!important;
+  }
+
+  .vendor-directory td[data-label="類別"]:empty{
+    display:none!important;
+  }
+
+  .vendor-directory td[data-label="類別"]:not(:empty){
+    background:rgba(55,91,87,.045)!important;
+    color:#59625f!important;
+    font-size:11px!important;
+  }
+
+  .vendor-directory td[data-label="公司名稱"]{
+    color:#294f4b!important;
+    font-size:15px!important;
+    font-weight:600!important;
+  }
+
+  .vendor-directory td[data-label="手機"],
+  .vendor-directory td[data-label="市話"],
+  .vendor-directory td[data-label="分機"]{
+    color:#3e4845!important;
+    font-family:Arial,"Microsoft JhengHei",sans-serif!important;
+    font-size:14px!important;
+    white-space:nowrap!important;
+    word-break:keep-all!important;
+    overflow-wrap:normal!important;
+  }
+
+  .vendor-directory td[data-label="聯絡人"]{
+    color:#4d5754!important;
+    font-size:13px!important;
+  }
+
+  /* Keep all text inside the value column. */
+  .vendor-directory td > *{
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+
+  /* Do not let rowspan categories create a broken table grid on mobile. */
+  .vendor-directory td[rowspan]{
+    vertical-align:middle!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -2077,36 +2220,35 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="vendor-directory" data-search="廠商 肯邦訂貨 肯邦學院 GW歌薇 覺亞 敏楊 世界 慕詠 桑多麗 日月星辰 偉志牌 力孚 振知 北泰廣告 鼎碩 中美 首銘 永順鋁 鋁燈 千合 寶椅子 良欣 魏國翔 美髮工會 秉承">
 <table>
 <thead>
-<tr><th>類別</th><th>公司名稱</th><th>手機</th><th>市話</th><th>分機</th><th>聯絡人</th></tr>
+<tr><th>類別</th><th>公司名稱</th><th>手機</th><th>市話</th><th>聯絡人</th></tr>
 </thead>
 <tbody>
-<tr><td data-label="類別"></td><td data-label="公司名稱">肯邦訂貨</td><td data-label="手機"></td><td data-label="市話">02-82265811</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別"></td><td data-label="公司名稱">肯邦學院</td><td data-label="手機"></td><td data-label="市話">02-82265822</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別"></td><td data-label="公司名稱">GW歌薇</td><td data-label="手機"></td><td data-label="市話">02-25181500</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別"></td><td data-label="公司名稱">覺亞</td><td data-label="手機"></td><td data-label="市話">02-89521800</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別"></td><td data-label="公司名稱">敏楊</td><td data-label="手機">0906-538-870</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人">John王經理</td></tr>
-<tr><td data-label="類別"></td><td data-label="公司名稱">世界</td><td data-label="手機">0932-551-623</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人">李文濱</td></tr>
-<tr><td data-label="類別"></td><td data-label="公司名稱">慕詠</td><td data-label="手機">0933-408-165</td><td data-label="市話">4620966</td><td data-label="分機"></td><td data-label="聯絡人">蔡經理</td></tr>
-<tr><td data-label="類別"></td><td data-label="公司名稱">桑多麗</td><td data-label="手機">0958-353-963</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人">游惠琪</td></tr>
-<tr><td data-label="類別">燈具</td><td data-label="公司名稱">日月星辰</td><td data-label="手機">0952-969-078</td><td data-label="市話">3634145</td><td data-label="分機"></td><td data-label="聯絡人">陳明鐘</td></tr>
-<tr><td data-label="類別">飲水</td><td data-label="公司名稱">偉志牌</td><td data-label="手機">0986-516-555</td><td data-label="市話">3414211</td><td data-label="分機"></td><td data-label="聯絡人">曾國河</td></tr>
-<tr><td data-label="類別">冷氣</td><td data-label="公司名稱">力孚</td><td data-label="手機">0928-101-427</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人">郭先生</td></tr>
-<tr><td data-label="類別">影印/打卡</td><td data-label="公司名稱">振知</td><td data-label="手機"></td><td data-label="市話">4531581</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別">招牌</td><td data-label="公司名稱">北泰廣告</td><td data-label="手機">0931-199-075</td><td data-label="市話">3019922</td><td data-label="分機"></td><td data-label="聯絡人">蔡記徽</td></tr>
-<tr><td data-label="類別">監視系統</td><td data-label="公司名稱">鼎碩</td><td data-label="手機">0926-729-789</td><td data-label="市話">2188063</td><td data-label="分機"></td><td data-label="聯絡人">曾睿淵（阿國）</td></tr>
-<tr><td data-label="類別">音響</td><td data-label="公司名稱">中美</td><td data-label="手機">0908-883-191</td><td data-label="市話">4632266</td><td data-label="分機"></td><td data-label="聯絡人">李宗謙</td></tr>
-<tr><td data-label="類別">洗-烘衣機</td><td data-label="公司名稱">首銘(永順鋁)</td><td data-label="手機">3375459</td><td data-label="市話">3312111</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別">鋁燈</td><td data-label="公司名稱">千合</td><td data-label="手機"></td><td data-label="市話">02-22829828</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別" rowspan="2">美髮椅</td><td data-label="公司名稱">寶椅子</td><td data-label="手機"></td><td data-label="市話">02-82213009</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別">良欣</td><td data-label="公司名稱"></td><td data-label="手機">02-22511886</td><td data-label="市話"></td><td data-label="分機"></td></tr>
-<tr><td data-label="類別">木工</td><td data-label="公司名稱">魏國翔</td><td data-label="手機">0915-557-053</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別"></td><td data-label="公司名稱">美髮工會</td><td data-label="手機"></td><td data-label="市話">004-920-921</td><td data-label="分機">11・12</td><td data-label="聯絡人"></td></tr>
-<tr><td data-label="類別">衛生紙・垃圾袋・保鮮膜</td><td data-label="公司名稱">秉承</td><td data-label="手機"></td><td data-label="市話">4508966</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">肯邦訂貨</td><td data-label="手機"></td><td data-label="市話">02-82265811</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">肯邦學院</td><td data-label="手機"></td><td data-label="市話">02-82265822</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">GW歌薇</td><td data-label="手機"></td><td data-label="市話">02-25181500</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">覺亞</td><td data-label="手機"></td><td data-label="市話">02-89521800</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">敏楊</td><td data-label="手機">0906-538-870</td><td data-label="市話"></td><td data-label="聯絡人">John王經理</td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">世界</td><td data-label="手機">0932-551-623</td><td data-label="市話"></td><td data-label="聯絡人">李文濱</td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">慕詠</td><td data-label="手機">0933-408-165</td><td data-label="市話">4620966</td><td data-label="聯絡人">蔡經理</td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">桑多麗</td><td data-label="手機">0958-353-963</td><td data-label="市話"></td><td data-label="聯絡人">游惠琪</td></tr>
+<tr><td data-label="類別">燈具</td><td data-label="公司名稱">日月星辰</td><td data-label="手機">0952-969-078</td><td data-label="市話">3634145</td><td data-label="聯絡人">陳明鐘</td></tr>
+<tr><td data-label="類別">飲水</td><td data-label="公司名稱">偉志牌</td><td data-label="手機">0986-516-555</td><td data-label="市話">3414211</td><td data-label="聯絡人">曾國河</td></tr>
+<tr><td data-label="類別">冷氣</td><td data-label="公司名稱">力孚</td><td data-label="手機">0928-101-427</td><td data-label="市話"></td><td data-label="聯絡人">郭先生</td></tr>
+<tr><td data-label="類別">影印/打卡</td><td data-label="公司名稱">振知</td><td data-label="手機"></td><td data-label="市話">4531581</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別">招牌</td><td data-label="公司名稱">北泰廣告</td><td data-label="手機">0931-199-075</td><td data-label="市話">3019922</td><td data-label="聯絡人">蔡記徽</td></tr>
+<tr><td data-label="類別">監視系統</td><td data-label="公司名稱">鼎碩</td><td data-label="手機">0926-729-789</td><td data-label="市話">2188063</td><td data-label="聯絡人">曾睿淵（阿國）</td></tr>
+<tr><td data-label="類別">音響</td><td data-label="公司名稱">中美</td><td data-label="手機">0908-883-191</td><td data-label="市話">4632266</td><td data-label="聯絡人">李宗謙</td></tr>
+<tr><td data-label="類別">洗-烘衣機</td><td data-label="公司名稱">首銘(永順鋁)</td><td data-label="手機">3375459</td><td data-label="市話">3312111</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別">鋁燈</td><td data-label="公司名稱">千合</td><td data-label="手機"></td><td data-label="市話">02-22829828</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別" rowspan="2">美髮椅</td><td data-label="公司名稱">寶椅子</td><td data-label="手機"></td><td data-label="市話">02-82213009</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="公司名稱">良欣</td><td data-label="手機"></td><td data-label="市話">02-22511886</td></tr>
+<tr><td data-label="類別">木工</td><td data-label="公司名稱">魏國翔</td><td data-label="手機">0915-557-053</td><td data-label="市話"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">美髮工會</td><td data-label="手機"></td><td data-label="市話">4920921 #11 #12</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別">衛生紙・垃圾袋・保鮮膜</td><td data-label="公司名稱">秉承</td><td data-label="手機"></td><td data-label="市話">4508966</td><td data-label="聯絡人"></td></tr>
 </tbody>
 </table>
 </div>
 </section>
-<div class="quote"><p>從現在開始，我們所做的一切，都是為了成就你和你的成功。</p><small>PAMA · 幸福企業 · 與您一起實踐夢想</small></div>
 </main>
 <footer>PAMA HAIR SALON · SINCE 1989 · 帕瑪員工福利制度</footer>
 <script>
