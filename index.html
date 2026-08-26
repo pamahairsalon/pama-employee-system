@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V109</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V116</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -1393,6 +1393,311 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 }
 </style>
 
+
+<style>
+/* ===== V110: admin / insurance / vendor table updates ===== */
+.insurance-panel{
+  border:1px solid var(--line);
+  background:rgba(255,250,241,.92);
+  padding:24px;
+  margin-bottom:28px;
+}
+.insurance-intro{
+  padding:18px 20px;
+  background:rgba(55,91,87,.06);
+  border-left:3px solid var(--gold);
+  margin-bottom:18px;
+  color:#596663;
+}
+.insurance-intro strong{
+  color:var(--green-deep);
+  font-size:16px;
+}
+.insurance-intro p{
+  margin:7px 0 0;
+  font-size:14px;
+}
+.insurance-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.insurance-card{
+  background:#fffaf1;
+  border:1px solid var(--line);
+  padding:20px;
+}
+.insurance-card h4{
+  color:var(--green-deep);
+  font-size:18px;
+  margin:0 0 12px;
+  padding-bottom:9px;
+  border-bottom:1px solid var(--line-gold);
+}
+.insurance-card p,
+.insurance-card li{
+  color:#5f6a67;
+  font-size:13px;
+  line-height:1.85;
+}
+.insurance-card ul{
+  margin:8px 0 0;
+  padding-left:20px;
+}
+.vendor-directory{
+  border:1px solid var(--line);
+  overflow-x:auto;
+  background:#fffaf1;
+}
+.vendor-directory table{
+  min-width:780px;
+  width:100%;
+  border-collapse:collapse;
+}
+.vendor-directory th{
+  background:var(--green);
+  color:var(--cream);
+  text-align:center;
+}
+.vendor-directory td{
+  color:#4f5a57;
+  text-align:center;
+  background:#fffaf1;
+}
+.vendor-directory td:nth-child(1),
+.vendor-directory td:nth-child(2){
+  text-align:left;
+}
+.vendor-directory tbody tr:nth-child(even) td{
+  background:#fbf6ed;
+}
+.vendor-directory tbody tr:hover td{
+  background:rgba(223,183,67,.10);
+}
+@media(max-width:719px){
+  .insurance-panel{
+    padding:15px;
+  }
+  .insurance-grid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .insurance-card{
+    padding:17px;
+  }
+  .insurance-card h4{
+    font-size:17px;
+  }
+}
+</style>
+
+
+<style>
+/* ===== V111: 05 + 07 merged, layout repaired ===== */
+#benefit .service-price-subhead{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+#benefit .service-price-subhead h3{
+  margin:0;
+  color:var(--green-deep);
+  font-size:27px;
+  font-weight:500;
+}
+#benefit > .grid{
+  margin-bottom:0;
+}
+@media(max-width:719px){
+  #benefit .service-price-subhead{
+    flex-wrap:wrap;
+    gap:9px;
+  }
+  #benefit .service-price-subhead h3{
+    font-size:23px;
+  }
+}
+</style>
+
+
+<style>
+/* ===== V112: salary promotion checkpoints + vendor layout ===== */.vendor-directory{
+  width:100%!important;
+  max-width:100%!important;
+  overflow:visible!important;
+  border:1px solid var(--line)!important;
+  border-radius:12px!important;
+  background:var(--surface)!important;
+}
+.vendor-directory table{
+  width:100%!important;
+  min-width:0!important;
+  table-layout:fixed!important;
+  border-collapse:separate!important;
+  border-spacing:0!important;
+}
+.vendor-directory th,
+.vendor-directory td{
+  box-sizing:border-box!important;
+  vertical-align:middle!important;
+  word-break:normal!important;
+  overflow-wrap:anywhere!important;
+}
+.vendor-directory th:nth-child(1),
+.vendor-directory td:nth-child(1){width:12%!important}
+.vendor-directory th:nth-child(2),
+.vendor-directory td:nth-child(2){width:22%!important}
+.vendor-directory th:nth-child(3),
+.vendor-directory td:nth-child(3){width:22%!important}
+.vendor-directory th:nth-child(4),
+.vendor-directory td:nth-child(4){width:22%!important}
+.vendor-directory th:nth-child(5),
+.vendor-directory td:nth-child(5){width:10%!important}
+.vendor-directory th:nth-child(6),
+.vendor-directory td:nth-child(6){width:14%!important}
+.vendor-directory th{
+  white-space:nowrap!important;
+  font-size:13px!important;
+  padding:14px 10px!important;
+}
+.vendor-directory td{
+  font-size:13px!important;
+  line-height:1.55!important;
+  padding:12px 10px!important;
+}
+.vendor-directory td:nth-child(n+3){
+  font-family:Arial,"Microsoft JhengHei",sans-serif!important;
+  font-size:12.5px!important;
+}
+.vendor-directory tbody tr:nth-child(even) td{
+  background:rgba(55,91,87,.035)!important;
+}
+
+/* Mobile: turn each row into a readable card; no horizontal squeezing. */
+@media(max-width:719px){
+  .vendor-directory{
+    overflow:visible!important;
+    border:0!important;
+    background:transparent!important;
+  }
+  .vendor-directory table{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+  }
+  .vendor-directory thead{
+    display:none!important;
+  }
+  .vendor-directory tbody{
+    display:grid!important;
+    gap:10px!important;
+  }
+  .vendor-directory tr{
+    display:grid!important;
+    grid-template-columns:1fr 1.45fr!important;
+    gap:0!important;
+    width:100%!important;
+    border:1px solid var(--line)!important;
+    border-radius:10px!important;
+    background:var(--surface)!important;
+    overflow:hidden!important;
+    box-shadow:var(--shadow-soft)!important;
+  }
+  .vendor-directory td{
+    display:grid!important;
+    grid-template-columns:minmax(92px,.72fr) minmax(0,1.28fr)!important;
+    width:auto!important;
+    padding:9px 11px!important;
+    border-bottom:1px solid rgba(55,91,87,.09)!important;
+    background:transparent!important;
+    text-align:left!important;
+    min-height:39px!important;
+  }
+  .vendor-directory td:last-child{
+    border-bottom:0!important;
+  }
+  .vendor-directory td::before{
+    content:attr(data-label)!important;
+    color:var(--muted)!important;
+    font-size:10px!important;
+    line-height:1.4!important;
+    padding-right:8px!important;
+  }
+  .vendor-directory td{
+    grid-column:1 / -1!important;
+  }
+  .vendor-directory td[data-label="類別"]{
+    background:rgba(55,91,87,.045)!important;
+  }
+  .vendor-directory td[data-label="公司名稱"]{
+    color:var(--green-deep)!important;
+    font-weight:600!important;
+  }
+  .vendor-directory td[data-label="手機"],
+  .vendor-directory td[data-label="市話"],
+  .vendor-directory td[data-label="分機"]{
+    font-family:Arial,"Microsoft JhengHei",sans-serif!important;
+  }
+}
+
+@media(min-width:720px) and (max-width:1099px){
+  .vendor-directory th,
+  .vendor-directory td{
+    font-size:12px!important;
+    padding:10px 7px!important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== V113: assistant salary information deduplicated ===== */
+.dream-salary-steps{
+  margin-top:20px!important;
+}
+</style>
+
+
+<style>
+/* ===== V114: assistant salary wording refined ===== */
+.dream-salary-steps{
+  margin-top:20px!important;
+}
+.dream-salary-steps > div:last-child{
+  border-color:rgba(202,168,95,.48)!important;
+}
+.dream-salary-steps > div:last-child b{
+  color:var(--green-deep)!important;
+}
+</style>
+
+
+<style>
+/* ===== V116: clickable Google Maps addresses only ===== */
+.store-address-link{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px dashed rgba(202,168,95,.55);
+  transition:color .18s ease, border-color .18s ease;
+}
+.store-address-link:hover{
+  color:var(--green-deep);
+  border-bottom-color:var(--gold);
+}
+.store-address-link::after{
+  content:" ↗";
+  color:var(--gold);
+  font-size:.9em;
+  white-space:nowrap;
+}
+@media(max-width:719px){
+  .store-address-link{
+    display:inline;
+    padding-bottom:1px;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -1409,18 +1714,17 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
     <a href="#work">02　工作規範</a>
     <a href="#income">03　薪資抽成</a>
     <a href="#leave">04　休假制度</a>
-    <a href="#benefit">05　員工福利</a>
+    <a href="#benefit">05　福利與優惠・服務</a>
     <a href="#learning">06　教育培訓</a>
-    <a href="#privilege">07　員工優惠</a>
-    <a href="#model">08　模特兒制度</a>
-    <a href="#admin">09　行政人事</a>
-    <a href="#contact">10　實用資訊</a>
+    <a href="#model">07　模特兒制度</a>
+    <a href="#admin">08　勞健保／行政</a>
+    <a href="#contact">09　分店・廠商・資訊</a>
   </nav>
 </div>
 
 
 <nav class="navlinks">
-<a href="#culture">PAMA文化與品牌</a><a href="#work">工作規範</a><a href="#income">薪資抽成</a><a href="#leave">休假制度</a><a href="#benefit">員工福利</a><a href="#learning">教育培訓</a><a href="#privilege">員工優惠・服務</a><a href="#model">模特兒制度</a><a href="#admin">行政品質</a><a href="#contact">實用資訊</a>
+<a href="#culture">PAMA文化與品牌</a><a href="#work">工作規範</a><a href="#income">薪資抽成</a><a href="#leave">休假制度</a><a href="#benefit">福利與優惠・服務</a><a href="#learning">教育培訓</a><a href="#model">模特兒制度</a><a href="#admin">勞健保／行政</a><a href="#contact">分店・廠商・資訊</a>
 </nav>
 </div>
 <div class="search">
@@ -1436,8 +1740,6 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
   <small>TOP</small>
 </button>
 
-
-</div>
 <div class="overlay hidden" id="overlay"></div><div class="search-result hidden" id="searchResult"></div>
 <main>
 <section class="hero" style="border-top:0">
@@ -1445,6 +1747,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="hero-side"><div class="since">1989</div><div class="caption">制度｜福利｜成長｜服務｜實用資訊</div><div class="mini"><span class="pill">正式制度</span><span class="pill">快速搜尋</span><span class="pill">特休試算</span></div></div>
 </section>
 <section data-section="01 PAMA文化與品牌" id="culture">
+
 <div class="head">
 <div class="no">01</div>
 <div>
@@ -1508,8 +1811,10 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <p>我們致力於提供顧客正確、迅速且高水準的服務；保持積極態度與團隊精神，營造愉快且安全的工作環境；發展成為井然有序、衛生整潔的高級沙龍；建立同事之間良好和諧的關係。</p>
 </div>
 </div>
+
 </section>
 <section data-section="02 工作時間與出勤" id="work">
+
 <div class="head"><div class="no">02</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path></svg><h2 class="title">工作時間與出勤規範</h2></div><div class="sub">工作時間｜打卡｜服裝儀容｜設備</div></div></div>
 <div class="schedule" data-search="營業時間 上班 打卡 09:30 10:00 19:00 17:00">
 <div class="schedule-row"><span>週一～週六</span><strong>10:00–19:00</strong></div><div class="schedule-row"><span>週日</span><strong>10:00–17:00</strong></div><div class="schedule-row"><span>上班打卡時間</span><strong>09:30</strong></div>
@@ -1518,156 +1823,70 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <article class="card" data-search="出勤打卡 漏打卡 逾時 全勤"><h3>出勤打卡</h3><ul><li>上下班應確實打卡。</li><li>漏打其中一項：$100。</li><li>逾時打卡：$100。</li><li>特殊狀況須由店長簽卡核准。</li><li>出勤卡不得使用修正液；錯誤紀錄以原子筆兩條橫線劃過，並於左側補登。</li><li>每超過1分鐘：$10。</li><li>月大會遲到：$1,000，無全勤。</li><li>週會遲到：依開會時間開始計算扣分，無全勤。</li><li>全勤獎金：每月$1,000。</li><li>年度榮譽全勤獎：$3,000。</li></ul></article>
 <article class="card" data-search="服裝 儀容 彩妝 早餐"><h3>服裝與儀容</h3><p>服裝、儀容、彩妝及早餐請於上班前完成準備。</p></article>
 <article class="card" data-search="工具 設備 吹風機 剪刀 染劑 藥水"><h3>工作環境與設備</h3><ul><li>吹風機、圍巾、鴨嘴夾、毛夾、橡皮筋、剪刀、電推、電捲棒、離子夾等工具由設計師自行購買。</li><li>借用公司物品須填寫借用、歸還單據並清點簽名。</li><li>每季可申請一組染劑、一組藥水，須簽呈至總部核准後申購。</li><li>申購之員工福利染劑、燙髮藥水不可在店內使用。</li><li>電器、電燈、冷氣未關閉：$500。</li></ul></article>
-</div></section>
+</div>
+</section>
 <section data-section="03 薪資與抽成" id="income">
+
 <div class="head"><div class="no">03</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 7h16M6 3h12v18H6z"></path><path d="M9 11h6M9 15h4"></path></svg><h2 class="title">薪資・業績・抽成制度</h2></div><div class="sub">技術抽成｜店販抽成｜特殊項目｜協助點數</div></div></div>
-<div class="role-section-title assistant-role-title"><span class="role-index">01</span><div><div class="role-kicker">ASSISTANT</div><h3>助理薪資制度</h3><p>能力分級｜圓夢考核｜薪資晉升</p></div></div><div class="notice salary-role" data-search="助理薪資 能力分級 A A+ A++ 最低工資 圓夢考核"><strong>能力分級薪資制度</strong><br/>助理薪資以 A 級為基準。A 級薪資隨每年度政府公告之最低工資調整；A＋、A＋＋依相同級距往上順延。<br/><br/>圓夢考核是助理薪資晉升的重要依據；考核完成並經現場服務表現評估符合晉升條件者，於<strong>次月</strong>依核定級別調整薪資。</div>
-<div class="table" data-search="助理薪資 A A+ A++ 最低工資 2026"><table><tr><th>薪資級別</th><th>薪資基準</th><th>2026年基準</th><th>晉升原則</th></tr><tr><td>A</td><td>當年度政府公告最低工資</td><td><strong>$29,500</strong></td><td>以當年度最低工資為基準</td></tr><tr><td>A＋</td><td>A級＋$1,000</td><td><strong>$30,500</strong></td><td>於A級基準上加$1,000</td></tr><tr><td>A＋＋</td><td>A級＋$2,000</td><td><strong>$31,500</strong></td><td>於A級基準上加$2,000</td></tr></table></div>
-<div class="dream-salary-steps"><div><b>① 圓夢考核進度</b><span>依圓夢計畫各階段完成進度進行考核。</span></div><div><b>② 現場服務表現</b><span>實際晉升仍會依助理在現場的服務狀況綜合評估。</span></div><div><b>③ 考核通過後</b><span>符合晉升條件並通過考核者，於次月依核定級別調整薪資。</span></div></div>
-<div class="notice"><strong>薪資基準調整原則</strong><br/>A 級薪資隨每年度政府公告之最低工資調整；A＋、A＋＋依相同級距往上順延。當年度最低工資調整後，三個級別依本制度重新計算。</div>
+<div class="role-section-title assistant-role-title"><span class="role-index">01</span><div><div class="role-kicker">ASSISTANT</div><h3>助理薪資制度</h3><p>能力分級｜圓夢考核｜薪資晉升</p></div></div>
+<div class="notice salary-role" data-search="助理薪資 能力分級 A A+ A++ 最低工資 圓夢考核 現場服務">
+  <strong>能力分級薪資制度</strong><br/>
+  助理薪資以 A 級為基準。A 級薪資隨每年度政府公告之最低工資調整；薪資級距以圓夢考核及現場服務為依據，考核完成並經現場服務表現評估符合晉升條件者，於<strong>次月</strong>依核定級別調整薪資。
+</div>
+
+<div class="table" data-search="助理薪資 A A+ A++ 最低工資 2026 圓夢4 專業燙髮 圓夢7 諮詢溝通">
+  <table>
+    <tr><th>薪資級別</th><th>薪資基準</th><th>2026年基準</th><th>晉升原則</th></tr>
+    <tr>
+      <td>A</td>
+      <td>當年度政府公告最低工資</td>
+      <td><strong>$29,500</strong></td>
+      <td>以當年度最低工資為基準</td>
+    </tr>
+    <tr>
+      <td>A＋</td>
+      <td>A級＋$1,000</td>
+      <td><strong>$30,500</strong></td>
+      <td>於A級基準上加$1,000；<strong>圓夢4「專業燙髮」考核通過即晉升</strong></td>
+    </tr>
+    <tr>
+      <td>A＋＋</td>
+      <td>A級＋$2,000</td>
+      <td><strong>$31,500</strong></td>
+      <td>於A級基準上加$2,000；<strong>圓夢7「諮詢溝通」考核通過即晉升</strong></td>
+    </tr>
+  </table>
+</div>
+
+<div class="dream-salary-steps">
+  <div>
+    <b>1. 現場服務表現評估</b>
+    <span>實際工作表現、服務品質及現場執行狀況納入評估。</span>
+  </div>
+  <div>
+    <b>2. 圓夢培訓計畫考核</b>
+    <span>依圓夢培訓計畫各階段考核結果作為薪資級距晉升依據。</span>
+  </div>
+  <div>
+    <b>✦ 經店長評估後於次月依核定調整薪資。</b>
+    <span>符合晉升條件者，於次月依核定級別調整薪資。</span>
+  </div>
+</div>
 <div class="designer-pay-block" data-search="設計師薪資 設計師 業績 抽成 技術 店販"><div class="role-section-title designer-role-title"><span class="role-index">02</span><div><div class="role-kicker">DESIGNER</div><h3>設計師薪資・業績・抽成制度</h3><p>技術抽成｜店販抽成｜特殊項目｜協助點數</p></div></div>
 <div class="notice important" data-search="無使用助理 技術抽成 50%"><strong>無使用助理｜請先看這裡</strong><br/>設計師未使用助理時，技術業績抽成一律 <strong>50%</strong>。以下表格中的「有使用助理」為使用助理時的抽成級距，兩種制度明確區分。</div>
 <div class="table" data-search="技術抽成 有助理 無助理 40 42 45 50"><table><tr><th>設計師技術業績</th><th>有使用助理</th><th>無使用助理</th></tr><tr><td>10萬元以下</td><td>40%</td><td rowspan="4"><strong>50%</strong></td></tr><tr><td>10萬～15萬元</td><td>42%</td></tr><tr><td>15萬～25萬元</td><td>45%</td></tr><tr><td>25萬元以上</td><td>50%</td></tr></table></div>
 <div class="compact"><span class="tag">店販</span><h3>店販抽成制度</h3></div>
 <div class="table" data-search="店販抽成 15 20 25"><table><tr><th>店販業績</th><th>抽成</th></tr><tr><td>$0～99,999</td><td>15%</td></tr><tr><td>$100,000～149,999</td><td>20%</td></tr><tr><td>$150,000以上</td><td>25%</td></tr></table></div>
 </div>
+
 </section>
-
-<div class="special-pay-block">
-
-  <div class="compact"><span class="tag">特殊制度</span><h3>協助點數制度</h3></div>
-
-  <div class="notice" data-search="協助點數 20元 1點 設計師 實收 發帳">
-    <strong>20 元為一個單位（1 點）</strong><br/>
-    協助點數依實際協助項目計算；以下內容為各項服務對應點數。
-  </div>
-
-  <div class="special-grid">
-    <div class="special-card">
-      <div class="special-card-title">染（不含洗）</div>
-      <div class="table">
-        <table>
-          <tr><th>項目</th><th>短</th><th>中</th><th>長</th></tr>
-          <tr><td>全頭</td><td>2</td><td>3</td><td>4</td></tr>
-          <tr><td>漂髮</td><td>2</td><td>3</td><td>4</td></tr>
-          <tr><td>補髮根</td><td>2</td><td></td><td></td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="special-card">
-      <div class="special-card-title">護（不含洗）</div>
-      <div class="table">
-        <table>
-          <tr><th>項目</th><th>點數</th></tr>
-          <tr><td>HPS</td><td>5</td></tr>
-          <tr><td>IAU</td><td>5</td></tr>
-          <tr><td>京喚羽</td><td>5</td></tr>
-          <tr><td>女神</td><td>5</td></tr>
-          <tr><td>馭髮道</td><td>5</td></tr>
-          <tr><td>AWG</td><td>2</td></tr>
-          <tr><td>鉑金</td><td>2</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="special-card">
-      <div class="special-card-title">燙（不含洗）</div>
-      <div class="table">
-        <table>
-          <tr><th>項目</th><th>1劑</th><th>2劑</th><th>夾直</th><th>全程</th></tr>
-          <tr><td>冷燙</td><td>1</td><td>1</td><td></td><td></td></tr>
-          <tr><td>熱塑</td><td>2</td><td>2</td><td></td><td></td></tr>
-          <tr><td>燙直</td><td>2</td><td>2</td><td>7</td><td>13</td></tr>
-          <tr><td>壓趟</td><td>1</td><td>1</td><td></td><td></td></tr>
-          <tr><td>潤海</td><td>X</td><td>X</td><td></td><td></td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="special-card">
-      <div class="special-card-title">頭皮</div>
-      <div class="table">
-        <table>
-          <tr><th>項目</th><th>點數</th></tr>
-          <tr><td>頭皮酵素</td><td>1</td></tr>
-          <tr><td>淨化</td><td>X</td></tr>
-          <tr><td>頭膜</td><td>1</td></tr>
-          <tr><td>安瓶＋頭皮霧化儀</td><td>1</td></tr>
-          <tr><td>T3</td><td>2</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="special-card special-card-wide">
-      <div class="special-card-title">其他</div>
-      <div class="table">
-        <table>
-          <tr><th>項目</th><th>點數</th></tr>
-          <tr><td>洗</td><td>2</td></tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="notice">
-    <strong>帳務備註</strong><br/>
-    ※ 設計師以實收做為發帳，如消費者所欠現金，當天設計師應補足。
-  </div>
-
-  <div class="compact"><span class="tag">特殊抽成</span><h3>增毛、假髮片抽成</h3></div>
-
-  <div class="special-grid special-grid-2">
-    <article class="special-card">
-      <div class="special-card-title">增毛</div>
-      <p><strong>抽成：</strong>售價（1根20元）－成本（售價×0.25）→ 設計師60%：店家40%</p>
-      <div class="formula">
-        <div>例：500根×20＝<strong>10,000</strong></div>
-        <div>10,000－(10,000×0.25)＝<strong>7,500</strong></div>
-        <div>設計師 7,500×0.6＝<strong>4,500</strong></div>
-        <div>店家 7,500×0.4＝<strong>3,000</strong></div>
-      </div>
-    </article>
-
-    <article class="special-card">
-      <div class="special-card-title">假髮片</div>
-      <p><strong>售價是成本的3倍</strong></p>
-      <p><strong>抽成：</strong>售價－成本 → 設計師60%：店家40%</p>
-      <div class="formula">
-        <div>例：12,000×3＝<strong>36,000</strong></div>
-        <div>36,000－12,000＝<strong>24,000</strong></div>
-        <div>設計師 24,000×0.6＝<strong>14,400</strong></div>
-        <div>店家 24,000×0.4＝<strong>9,600</strong></div>
-      </div>
-    </article>
-  </div>
-
-  <div class="compact"><span class="tag">KEY 技術</span><h3>假髮片・燙・染 Key 技術抽成</h3></div>
-
-  <div class="table" data-search="假髮片 燙 染 Key 技術抽成 髮片 5×8 7×10 8×12 9×14 12×14 13×15 14×16 15×17 16×18">
-    <table class="key-tech-table">
-      <tr><th>髮片</th><th>染</th><th>燙</th><th>漂</th></tr>
-      <tr><td>5×8</td><td>1,000</td><td>1,500</td><td>1,000</td></tr>
-      <tr><td>7×10<br/>8×12</td><td>1,500</td><td>2,000</td><td>1,500</td></tr>
-      <tr><td>9×14<br/>12×14</td><td>2,000</td><td>2,500</td><td>2,000</td></tr>
-      <tr><td>13×15<br/>14×16</td><td>2,500</td><td>3,000</td><td>2,500</td></tr>
-      <tr><td>15×17<br/>16×18</td><td>3,000</td><td>3,500</td><td>3,000</td></tr>
-    </table>
-  </div>
-
-  <div class="notice">
-    <strong>※ 內容依你提供的三張參考圖整理。</strong><br/>
-    表格中的尺寸組合與金額依原圖呈現方式保留。
-  </div>
-
-</div>
-
 <section data-section="04 休假制度" id="leave">
+
 <div class="head"><div class="no">04</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><rect height="15" rx="1" width="16" x="4" y="5"></rect><path d="M8 3v4M16 3v4M4 9h16"></path></svg><h2 class="title">休假制度</h2></div><div class="sub">排休｜輪休｜特休｜事假｜病假｜婚假｜喪假｜公假</div></div></div>
 <div class="grid">
 <article class="card" data-search="設計師 假日排休 業績 120000 150000 200000"><h3>設計師｜假日排休</h3><p>每月基本可排休1個假日。依當月業績增加次月假日排休：</p><ul><li>未達$120,000：1個</li><li>$120,000以上：2個</li><li>$150,000以上：3個</li><li>$200,000以上：4個</li></ul><p>假日＝週六、週日及國定假日紅字。</p></article>
 <article class="card" data-search="助理 行政 假日 排休 特休"><h3>助理／行政｜假日排休</h3><p>每3個月（每季）可排休1個假日。有特休優先使用；有特休但選擇不使用可以選擇扣薪；無特休依底薪及當月天數計算扣薪。</p></article>
-<article class="card" data-search="輪休 8天 連休 春節"><h3>輪休</h3><ul><li>每人可排輪休8天。</li><li>假日排休扣2天。</li><li>連休需傳簽呈，個案處理。</li><li>春節期間，年假前後管休，依總部公告。</li><li>上課進修學習者可優先排假。</li></ul></article>
+<article class="card" data-search="輪休 8天 連休 春節"><h3>輪休</h3><ul><li>每人可排輪休8天。</li><li>連休需傳簽呈，個案處理。</li><li>春節期間，年假前後管休，依總部公告。</li><li>上課進修學習者可優先排假。</li></ul></article>
 </div>
 <div class="compact"><span class="tag">特休</span><h3>年資特休</h3></div>
 <div class="table" data-search="年資特休 1 5 7天 10天 30天"><table><tr><th>年資</th><th>特休</th></tr><tr><td>滿1～5年</td><td>7天</td></tr><tr><td>滿5～10年</td><td>10天</td></tr><tr><td>10年以上</td><td>每增加1年＋1天</td></tr><tr><td>上限</td><td>30天</td></tr></table></div>
@@ -1701,17 +1920,26 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </div>
 <div class="result" id="leaveResult"></div>
 </div>
-<div class="compact"><span class="tag">請假</span><h3>事假・病假・婚假・喪假・天災與公假</h3></div><div class="accordion"><details><summary>事假 <span class="plus">＋</span></summary><div class="detail">半天（5小時以內）$500；一般1日$1,000；假日1日$2,000。保障底薪制：底薪÷當月天數＝每日扣薪金額。原則上需事先申請；臨時狀況須告知店長原因並經批准。</div></details><details><summary>病假 <span class="plus">＋</span></summary><div class="detail">須於上班時間前告知店長；病假後一日提供掛號單或收據；未提供證明以事假扣款方式計算。保障底薪制者給假不給薪；病假遇假日扣一天；設計師一年病假6天，上、下半年各3天；超過額度以事假論；重大傷病個案另行處理。</div></details><details><summary>婚假 <span class="plus">＋</span></summary><div class="detail">員工結婚可請7天；以喜帖作為請假依據；可跨週、跨月、連休或分段休；不扣全勤獎金。</div></details><details><summary>喪假 <span class="plus">＋</span></summary><div class="detail"><div class="table"><table><tr><th>親屬關係</th><th>喪假日數</th></tr><tr><td>父母、養父母、配偶</td><td>8天</td></tr><tr><td>祖父母、外祖父母、子女、配偶父母、配偶養父母</td><td>6天</td></tr><tr><td>曾祖父母、兄弟姊妹、配偶祖父母</td><td>3天</td></tr></table></div><p>應檢附訃聞影本，自死亡日起計算，百日內請完；因傳統禮俗可申請分次給假。非直系親屬需請事假，遇假日扣一天。符合規定者不得扣全勤獎金。</p></div></details><details><summary>天災與公假 <span class="plus">＋</span></summary><div class="detail">助理、行政、設計師保障底薪人員：公司給假不給薪，有全勤；設計師因天災不扣全勤。可申請公假：國防部點閱／教育召集、代表店家參加國內外美髮競賽、代表店家參加國外進修（特別指派）。</div></details><details><summary>國定假日與節慶出勤 <span class="plus">＋</span></summary><div class="detail">國定假日不休；如需休假，需排休或請假。元旦1/1中午12:00上班；中秋、端午17:00下班；清明節掃墓扣一天假，其餘節慶請假扣二天。</div></details></div>
+<div class="compact"><span class="tag">請假</span><h3>事假・病假・婚假・喪假・天災與公假</h3></div><div class="accordion"><details><summary>事假 <span class="plus">＋</span></summary><div class="detail">半天（5小時以內）$500；一般1日$1,000；假日1日$2,000。保障底薪制：底薪÷當月天數＝每日扣薪金額。原則上需事先申請；臨時狀況須告知店長原因並經批准。</div></details><details><summary>病假 <span class="plus">＋</span></summary><div class="detail">須於上班時間前告知店長；病假後一日提供掛號單或收據；未提供證明以事假扣款方式計算。保障底薪制者給假不給薪；病假遇假日扣一天；設計師一年病假6天，上、下半年各3天；超過額度以事假論；重大傷病個案另行處理。</div></details><details><summary>婚假 <span class="plus">＋</span></summary><div class="detail">員工結婚可請7天；以喜帖作為請假依據；可跨週、跨月、連休或分段休；不扣全勤獎金。</div></details><details><summary>喪假 <span class="plus">＋</span></summary><div class="detail"><div class="table"><table><tr><th>親屬關係</th><th>喪假日數</th></tr><tr><td>父母、養父母、配偶</td><td>8天</td></tr><tr><td>祖父母、外祖父母、子女、配偶父母、配偶養父母</td><td>6天</td></tr><tr><td>曾祖父母、兄弟姊妹、配偶祖父母</td><td>3天</td></tr></table></div><p>應檢附訃聞影本，自死亡日起計算，百日內請完；因傳統禮俗可申請分次給假。非直系親屬需請事假，遇假日扣一天。符合規定者不得扣全勤獎金。</p></div></details><details><summary>天災與公假 <span class="plus">＋</span></summary><div class="detail">助理、行政、設計師保障底薪人員：公司給假不給薪，有全勤；設計師因天災不扣全勤。可申請公假：國防部點閱／教育召集、代表店家參加國內外美髮競賽、代表店家參加國外進修（特別指派）。</div></details><details><summary>國定假日與節慶出勤 <span class="plus">＋</span></summary><div class="detail">國定假日不休；如需休假，需排休或請假。元旦1/1中午12:00上班；中秋、端午17:00下班</div></details></div>
+
 </section>
-<section data-section="05 員工福利" id="benefit">
-<div class="head"><div class="no">05</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M12 20s-7-4.5-9-8.6C1.4 8.2 3.4 5 6.5 5c2 0 3.5 1.2 4.5 3 1-1.8 2.5-3 4.5-3C18.6 5 20.6 8.2 19 11.4 17 15.5 12 20 12 20z"></path></svg><h2 class="title">員工福利・福利基金・旅遊</h2></div><div class="sub">福利金｜節慶｜保險｜員工旅遊</div></div></div>
+<section data-section="05 員工福利・員工優惠・員工服務" id="benefit">
+
+<div class="head"><div class="no">05</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M12 20s-7-4.5-9-8.6C1.4 8.2 3.4 5 6.5 5c2 0 3.5 1.2 4.5 3 1-1.8 2.5-3 4.5-3C18.6 5 20.6 8.2 19 11.4 17 15.5 12 20 12 20z"></path></svg><h2 class="title">員工福利・福利基金・旅遊・員工優惠</h2></div><div class="sub">福利金｜節慶｜保險｜員工旅遊｜員工優惠與服務</div></div></div>
 <div class="grid">
 <article class="card" data-search="生日 過年 中秋 結婚 喪事 福利"><h3>節慶福利</h3><table><tr><th>項目</th><th>福利</th></tr><tr><td>生日</td><td>$1,000</td></tr><tr><td>過年</td><td>$1,000</td></tr><tr><td>中秋</td><td>$1,000<br/><span class="small">月餅禮盒、PAMA紀念商品、公司烤肉或聚餐</span></td></tr><tr><td>結婚</td><td>$1,000</td></tr><tr><td>喪事</td><td>$1,100</td></tr></table></article>
 <article class="card" data-search="福利基金 150 使用說明 員工福利 教育 旅遊 活動"><h3>福利基金</h3><p><strong>$150／月</strong><br/>每月繳交福利基金$150。</p><div class="notice benefit-note"><strong>使用說明：</strong><br/>• 作為員工福利、教育、旅遊及活動經費。<br/>• 由公司統籌管理，專款專用。<br/>• 依公司公告之使用辦法執行。</div></article>
 <article class="card" data-search="職業災害保險"><h3>職業災害保險</h3><p>公司額外為員工加保職業災害保險。</p></article>
 </div>
-<div class="compact"><span class="tag">旅遊</span><h3>員工旅遊</h3></div><div class="table travel-table" data-search="員工旅遊 國內旅遊 補助 年資 5000 2500"><table><tr><th>到職年資</th><th>公司補助</th><th>員工自付</th></tr><tr><td>未滿半年</td><td>$0</td><td>$5,000</td></tr><tr><td>滿半年</td><td>$2,500</td><td>$2,500</td></tr><tr><td>滿一年</td><td>$5,000</td><td>$0</td></tr></table></div><div class="notice travel-note"><strong>備註</strong><br/>※ 員工若年資達到規定標準，公司將退還員工先行自繳的旅遊費用。<br>※ 國外旅遊補助方式與金額依當年度公司規劃及公告為準。</div><div class="subgroup-title">其他福利</div><div class="grid welfare-other-grid"><article class="card" data-search="春酒 感恩日"><h3>春酒／感恩日</h3><p>依公司當年度規劃辦理。</p></article><article class="card" data-search="福利金制度 新進人員 半年"><h3>福利金制度</h3><p>新進人員工作滿半年以上享有福利金制度。</p></article><article class="card" data-search="新人 實習週 全薪"><h3>新人實習週</h3><ul><li>新進人員需一星期實習週。</li><li>實習週通過者薪資以全薪發放。</li><li>未滿一週不適任者無全薪。</li></ul></article><article class="card" data-search="員工產品福利 肯邦 7折 專案 8折 髮亞 5折 其他產品 店長 會計"><h3>員工產品福利</h3><ul><li>肯邦架上貨品：7折</li><li>配合專案產品：8折</li><li>髮亞產品：5折（成本價）</li></ul><p>員工提貨不計入店販抽成；設計師私人使用之貨品須購置福利品供自己使用；如查到自行販售，罰原價10倍。</p><div class="notice benefit-note"><strong>以上為大部分店家使用的產品優惠。</strong><br/>其他品牌產品亦有員工優惠，各品牌產品優惠另請洽詢店長及會計。</div></article><article class="card" data-search="員工親屬服務 直系親屬 7折 業績"><h3>員工親屬服務</h3><p>員工的<strong>直系親屬</strong>至帕瑪各分店消費，服務享<strong>7折優惠</strong>，並計入提供服務之設計師業績。</p><div class="notice benefit-note">適用範圍：員工直系親屬至帕瑪各分店消費。</div></article><article class="card" data-search="員工剪 燙 染 護 申請 跨店"><h3>員工剪・燙・染・護</h3><p>服務前須先填寫申請單，告知店長或行政後方可安排。跨店服務需簽呈並告知當店店長。</p></article></div></section>
+<div class="compact"><span class="tag">旅遊</span><h3>員工旅遊</h3></div><div class="table travel-table" data-search="員工旅遊 國內旅遊 補助 年資 5000 2500"><table><tr><th>到職年資</th><th>公司補助</th><th>員工自付</th></tr><tr><td>未滿半年</td><td>$0</td><td>$5,000</td></tr><tr><td>滿半年</td><td>$2,500</td><td>$2,500</td></tr><tr><td>滿一年</td><td>$5,000</td><td>$0</td></tr></table></div><div class="notice travel-note"><strong>備註</strong><br/>※ 員工若年資達到規定標準，公司將退還員工先行自繳的旅遊費用。<br>※ 國外旅遊補助方式與金額依當年度公司規劃及公告為準。</div><div class="subgroup-title">其他福利</div><div class="grid welfare-other-grid"><article class="card" data-search="春酒 感恩日"><h3>春酒／感恩日</h3><p>依公司當年度規劃辦理。</p></article><article class="card" data-search="福利金制度 新進人員 半年"><h3>福利金制度</h3><p>新進人員工作滿半年以上享有福利金制度。</p></article><article class="card" data-search="新人 實習週 全薪"><h3>新人實習週</h3><ul><li>新進人員需一星期實習週。</li><li>實習週通過者薪資以全薪發放。</li><li>未滿一週不適任者無全薪。</li></ul></article><article class="card" data-search="員工產品福利 肯邦 7折 專案 8折 髮亞 5折 其他產品 店長 會計"><h3>員工產品福利</h3><ul><li>肯邦架上貨品：7折</li><li>配合專案產品：8折</li><li>髮亞產品：5折（成本價）</li></ul><p>員工提貨不計入店販抽成；設計師私人使用之貨品須購置福利品供自己使用；如查到自行販售，罰原價10倍。</p><div class="notice benefit-note"><strong>以上為大部分店家使用的產品優惠。</strong><br/>其他品牌產品亦有員工優惠，各品牌產品優惠另請洽詢店長及會計。</div></article><article class="card" data-search="員工親屬服務 直系親屬 7折 業績"><h3>員工親屬服務</h3><p>員工的<strong>直系親屬</strong>至帕瑪各分店消費，服務享<strong>7折優惠</strong>，並計入提供服務之設計師業績。</p><div class="notice benefit-note">適用範圍：員工直系親屬至帕瑪各分店消費。</div></article><article class="card" data-search="員工剪 燙 染 護 申請 跨店"><h3>員工剪・燙・染・護</h3><p>服務前須先填寫申請單，告知店長或行政後方可安排。跨店服務需簽呈並告知當店店長。</p></article>
+</div>
+<div class="compact service-price-subhead" style="margin-top:55px"><span class="tag">服務</span><h3>員工服務價目</h3></div>
+<div class="table" data-search="員工服務 燙髮 染髮 護髮 PLIA AWG HPS 京喚羽 女神 鉑金"><table><tr><th>類別</th><th>項目</th><th>價格</th></tr><tr><td>燙髮</td><td>冷燙／熱塑／燙直／特殊燙</td><td>$300／$500／$420／$400</td></tr><tr><td>染髮</td><td>染髮／挑染</td><td>$210／$500</td></tr><tr><td>特殊燙髮與修護</td><td>PLIA中長髮／PLIA長髮／天使修護燙</td><td>$1,000／$1,200／$500</td></tr><tr><td>護髮</td><td>AWG／HPS／京喚羽／女神護髮</td><td>$500</td></tr><tr><td>護髮</td><td>鉑金短／中／長</td><td>$150／$180／$210</td></tr><tr><td>跨店洗髮</td><td>原價$300×0.7，並登記設計師業績</td><td>$210</td></tr></table></div>
+<div class="notice">未事先申請員工福利品或燙、染、護服務，一律以消費價格計算。</div>
+
+</section>
 <section data-section="06 教育培訓與圓夢計畫" id="learning">
+
 <div class="head"><div class="no">06</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 5h16v14H4z"></path><path d="M8 9h8M8 13h6"></path></svg><h2 class="title">教育培訓・圓夢計畫</h2></div><div class="sub">圓夢設計師培訓｜課程評鑑｜新人服務流程</div></div></div>
 <div class="notice" data-search="圓夢課程 依學員人數 開課 評鑑 作業"><strong>圓夢課程｜依學員人數開課</strong><br/>圓夢課程依學員人數安排開課；各課程依規定完成上課、作業與評鑑，作為培訓進階與總審核依據。</div>
 <div class="compact"><span class="tag">圓夢計畫</span><h3>圓夢設計師培訓計畫</h3></div>
@@ -1740,7 +1968,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </div>
 <div class="compact"><span class="tag">教育資源</span><h3>社內教育・社外教育・教育基金</h3></div>
 <div class="grid education-resource-grid" style="margin-top:28px">
-<article class="card" data-search="社內教育 Kevin商業精剪班 帕瑪男士基礎剪髮 帕瑪女士基礎剪髮 帕瑪男士進階剪燙 帕瑪女士進階剪燙 新人精緻服務流程培訓 專業服務流程 月循環 月大會 UTOWA 彩妝 專業染髮 頂級護髮 每日早晚會 行政培訓 專案特訓 作品創作節">
+<article class="card" data-search="社內教育 Kevin商業精剪班 帕瑪男士基礎剪髮 帕瑪女士基礎剪髮 帕瑪男士進階剪燙 帕瑪女士進階剪燙 新人精緻服務流程培訓 專業服務流程 月循環 月大會 專業染髮 頂級護髮 每日早晚會 行政培訓 專案特訓 作品創作節">
 <h3>社內教育</h3>
 <ul>
 <li>Kevin商業精剪班</li>
@@ -1749,7 +1977,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <li>新人精緻服務流程培訓</li>
 <li>專業服務與流程</li>
 <li>月循環課程、月大會</li>
-<li>UTOWA彩妝、專業染髮、頂級護髮</li>
+<li>專業染髮、頂級護髮</li>
 <li>每日早、晚會</li>
 <li>行政培訓、專案特訓、作品創作節</li>
 </ul>
@@ -1768,57 +1996,114 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <h3>教育基金</h3><p>設計師每月$1,000；助理每月$500。</p>
 </article>
 </div>
+
 </section>
-<section data-section="07 員工優惠與員工服務" id="privilege">
-<div class="head"><div class="no">07</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 8h16v12H4z"></path><path d="M12 8v12M3 8h18M6 8c-2 0-2-5 1-5 2.5 0 4 5 5 5 1-1 2.5-5 5-5 3 0 3 5 1 5"></path></svg><h2 class="title">員工優惠・員工服務</h2></div><div class="sub">產品福利｜親屬優惠｜員工服務價目｜服務申請</div></div></div>
-<div class="grid">
-<article class="card" data-search="員工提貨 肯邦 7折 專案 8折 髮亞 5折"><h3>員工產品福利</h3><div class="table"><table><tr><th>產品類型</th><th>優惠</th></tr><tr><td>肯邦架上貨品</td><td>7折</td></tr><tr><td>配合專案產品</td><td>8折</td></tr><tr><td>髮亞產品</td><td>5折（成本價）</td></tr></table></div><p>員工提貨不計入店販抽成；設計師私人使用之貨品須購置福利品供自己使用；如查到自行販售，罰原價10倍。</p><div class="notice benefit-note"><strong>以上為大部分店家使用的產品優惠。</strong><br/>其他品牌產品亦有員工優惠，各品牌產品優惠另請洽詢店長及會計。</div></article>
-<article class="card" data-search="直系親屬 7折 各分店 業績"><h3>員工親屬服務</h3><p>員工的<strong>直系親屬</strong>至帕瑪各分店消費，服務享<strong>7折優惠</strong>，並計入提供服務之設計師業績。</p><div class="notice">適用範圍：員工直系親屬至帕瑪各分店消費。</div></article>
-<article class="card" data-search="員工剪 燙 染 護 申請 跨店"><h3>員工剪・燙・染・護</h3><p>服務前須先填寫申請單，告知店長或行政後方可安排。跨店服務需簽呈並告知當店店長。</p></article>
-</div>
-<div class="head compact-head" style="margin-top:42px"><div class="subtag">SERVICE</div><div><h2 class="title small-title">員工服務・福利價目</h2><div class="sub">燙髮｜染髮｜修護｜護髮｜跨店服務</div></div></div>
-<div class="table" data-search="員工服務 燙髮 染髮 護髮 PLIA AWG HPS 京喚羽 女神 鉑金"><table><tr><th>類別</th><th>項目</th><th>價格</th></tr><tr><td>燙髮</td><td>冷燙／熱塑／燙直／特殊燙</td><td>$300／$500／$420／$400</td></tr><tr><td>染髮</td><td>染髮／挑染</td><td>$210／$500</td></tr><tr><td>特殊燙髮與修護</td><td>PLIA中長髮／PLIA長髮／天使修護燙</td><td>$1,000／$1,200／$500</td></tr><tr><td>護髮</td><td>AWG／HPS／京喚羽／女神護髮</td><td>$500</td></tr><tr><td>護髮</td><td>鉑金短／中／長</td><td>$150／$180／$210</td></tr><tr><td>跨店洗髮</td><td>原價$300×0.7，並登記設計師業績</td><td>$210</td></tr></table></div>
-<div class="notice">未事先申請員工福利品或燙、染、護服務，一律以消費價格計算。</div>
-</section>
-<section data-section="08 模特兒制度" id="model">
-<div class="head"><div class="no">08</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="7" r="3"></circle><path d="M6 21c.7-4.1 2.7-6 6-6s5.3 1.9 6 6"></path></svg><h2 class="title">模特兒制度</h2></div><div class="sub">助理模特兒｜設計師模特兒</div></div></div>
+<section data-section="07 模特兒制度" id="model">
+
+<div class="head"><div class="no">07</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="7" r="3"></circle><path d="M6 21c.7-4.1 2.7-6 6-6s5.3 1.9 6 6"></path></svg><h2 class="title">模特兒制度</h2></div><div class="sub">助理模特兒｜設計師模特兒</div></div></div>
 <div class="grid">
 <article class="card" data-search="助理模特兒 小天使 15位 30位 7折"><h3>助理模特兒｜小天使</h3><div class="table"><table><tr><th>項目</th><th>規定</th></tr><tr><td>前15位男女剪髮</td><td>免費</td></tr><tr><td>其後30位</td><td>正式服務7折</td></tr><tr><td>業績</td><td>可對半抽成</td></tr><tr><td>服務</td><td>非假日時段</td></tr><tr><td>管理</td><td>由店長監督</td></tr></table></div></article>
 <article class="card" data-search="設計師模特兒 每月1位 燙染 材料費"><h3>設計師模特兒</h3><ul><li>每月1位免費名額。</li><li>燙、染擇一，公司負擔該名額材料費。</li><li>後續材料費由設計師負擔。</li><li>須提前填寫簽呈至總部。</li><li>如向模特兒收取材料費，材料費須入公司收入；其餘多收取費用可入業績。</li></ul></article>
 <article class="card" data-search="模特兒 材料費 漂髮 上色 護髮"><h3>材料費計算</h3><p>全漂1次＋上色1次＋護髮：$420＋$420＋$500＝$1,340。</p><p>若向模特兒收取$2,000：$1,340為公司材料費，其餘$660可入設計師業績。</p></article>
 </div>
+
 </section>
-<section data-section="09 行政與人事" id="admin"><div class="head"><div class="no">09</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg><h2 class="title">行政與人事</h2></div><div class="sub">健保／勞保｜借支｜名片｜離職</div></div></div><div class="grid"><article class="card"><h3>健保／勞保</h3><p>健保、勞保4：6（店家）。</p></article><article class="card"><h3>借支</h3><p>每月20～23日提出簽呈至總部核准；25日由店內「公司支出」統一發放；於當月薪資扣除。</p></article><article class="card"><h3>名片</h3><p>製作版費由公司支出；印刷費公司與設計師各負擔一半。</p></article><article class="card"><h3>離職申請</h3><p>員工如欲離職，須於離職日前45天提出申請，最晚15天前提出。</p></article></div></section>
-<section data-section="10 分店與廠商資訊" id="contact">
-<div class="head"><div class="no">10</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 10l8-6 8 6 v10H4z"></path><path d="M9 20v-6h6v6"></path></svg><h2 class="title">分店・廠商・實用資訊</h2></div><div class="sub">分店聯絡｜營運管理中心｜廠商聯絡</div></div></div>
+<section data-section="08 行政與人事" id="admin">
+<div class="head"><div class="no">08</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg><h2 class="title">行政與人事</h2></div><div class="sub">勞健保｜借支｜名片｜離職</div></div></div>
+<div class="compact"><span class="tag">勞健保</span><h3>勞健保與相關補助</h3></div>
+<div class="insurance-panel" data-search="勞健保 勞保 健保 女子燙髮職業工會 入會費 押金 生育補助 喪葬補助">
+  <div class="insurance-intro">
+    <strong>帕瑪造型沙龍勞健保事宜皆由女子燙髮職業工會代辦。</strong>
+    <p>新進人員都會加保勞健保；新加保個人需負擔入會費及勞健保一個月押金，退保後會由女子燙髮職業工會退還押金。</p>
+  </div>
+  <div class="insurance-grid">
+    <article class="insurance-card">
+      <h4>員工負擔與公司福利</h4>
+      <ul>
+        <li>帕瑪員工皆享有勞健保公司負擔60%之福利。</li>
+        <li>若選擇放棄此員工福利，需向總管理處簽屬切結書。</li>
+        <li>若有眷屬需依附，請告知帕瑪總管理處辦理。</li>
+        <li>每年勞保局、健保局會公告調整的勞健保費用，會計會於發布後公告。</li>
+      </ul>
+    </article>
+    <article class="insurance-card">
+      <h4>生育補助</h4>
+      <p>一般在報戶口的時候，戶政單位就會幫忙送件。</p>
+      <p>如需辦理請準備：</p>
+      <ul>
+        <li>寶寶出生證明正本</li>
+        <li>母親的存摺與印章</li>
+        <li>母親及孩子的戶籍謄本</li>
+      </ul>
+    </article>
+    <article class="insurance-card">
+      <h4>喪葬補助</h4>
+      <p>勞保家屬死亡給付申請（配偶、兄弟姊妹一人申請）。</p>
+      <p>如需辦理請準備：</p>
+      <ul>
+        <li>死亡證明書</li>
+        <li>除戶戶籍謄本</li>
+        <li>申請人的戶籍謄本</li>
+        <li>存摺</li>
+        <li>印章</li>
+      </ul>
+      <div class="notice"><strong>申請期限</strong><br/>需於五年內申請。</div>
+    </article>
+  </div>
+</div>
+<div class="grid"><article class="card"><h3>借支</h3><p>每月20～23日提出簽呈至總部核准；25日由店內「公司支出」統一發放；於當月薪資扣除。</p></article><article class="card"><h3>名片</h3><p>製作版費由公司支出；印刷費公司與設計師各負擔一半。</p></article><article class="card"><h3>離職申請</h3><p>員工如欲離職，須於離職日前30天提出申請。</p></article></div>
+</section>
+<section data-section="09 分店與廠商資訊" id="contact">
+
+<div class="head"><div class="no">09</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 10l8-6 8 6 v10H4z"></path><path d="M9 20v-6h6v6"></path></svg><h2 class="title">分店・廠商・實用資訊</h2></div><div class="sub">分店聯絡｜營運管理中心｜廠商聯絡</div></div></div>
 <div class="compact"><span class="tag">分店</span><h3>帕瑪系列分店資訊</h3></div>
 <div class="store-grid" data-search="分店 PAMA INDEX TEMPO 莊敬 金陵 弘揚 延平 成功 中山 中正 八德 龜山 國際 市府">
-<div class="store"><div class="brandline">PAMA</div><h3>莊敬店</h3><p>桃園區莊敬路一段330號</p><p class="tel">03-3163227</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>金陵店</h3><p>平鎮區金陵路二段9號</p><p class="tel">03-4282178</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>弘揚店</h3><p>中壢區弘揚路6號</p><p class="tel">03-4561699</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>延平店</h3><p>桃園市中壢區延平路604號</p><p class="tel">03-4259117</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>成功店</h3><p>桃園區成功路二段141號</p><p class="tel">03-3316665</p><p>10:00–18:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>中山店</h3><p>中壢區中山東路二段164號</p><p class="tel">03-4650685</p><p>09:00–18:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">INDEX</div><h3>中正店</h3><p>桃園區中正路627號</p><p class="tel">03-3175822</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">INDEX</div><h3>延平店</h3><p>桃園市桃園區延平路37號</p><p class="tel">03-3665733</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">INDEX</div><h3>八德店</h3><p>八德區介壽路一段854號</p><p class="tel">03-3646565</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">INDEX</div><h3>龜山店</h3><p>龜山區明德路54巷5號</p><p class="tel">03-3200651</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">TEMPO</div><h3>國際店</h3><p>桃園區國際路一段1208號</p><p class="tel">03-2288530</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">TEMPO</div><h3>市府店</h3><p>桃園區廈門街77號</p><p class="tel">03-3331311</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>莊敬店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/SUT9ficx7LicBMVA8" target="_blank" rel="noopener noreferrer">桃園區莊敬路一段330號</a></p><p class="tel">03-3163227</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>金陵店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/5fzHj6aAdsGftfoB6" target="_blank" rel="noopener noreferrer">平鎮區金陵路二段9號</a></p><p class="tel">03-4282178</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>弘揚店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/YuwVEabTT7BAno9c7" target="_blank" rel="noopener noreferrer">中壢區弘揚路6號</a></p><p class="tel">03-4561699</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>延平店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/owuZGPfswnbqqD8R7" target="_blank" rel="noopener noreferrer">桃園市中壢區延平路604號</a></p><p class="tel">03-4259117</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>成功店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/My8GKn1qkBScX4os5" target="_blank" rel="noopener noreferrer">桃園區成功路二段141號</a></p><p class="tel">03-3316665</p><p>10:00–18:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>中山店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/3Fndekhi8ZPQ5ZP8A" target="_blank" rel="noopener noreferrer">中壢區中山東路二段164號</a></p><p class="tel">03-4650685</p><p>09:00–18:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">INDEX</div><h3>中正店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/goNim9PUWTNyrJmbA" target="_blank" rel="noopener noreferrer">桃園區中正路627號</a></p><p class="tel">03-3175822</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">INDEX</div><h3>延平店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/aFNSFLiGJLH1Qjgq7" target="_blank" rel="noopener noreferrer">桃園市桃園區延平路37號</a></p><p class="tel">03-3665733</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">INDEX</div><h3>八德店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/G66dL2N4CQRUxRS39" target="_blank" rel="noopener noreferrer">八德區介壽路一段854號</a></p><p class="tel">03-3646565</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">INDEX</div><h3>龜山店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/NKLR2vyN7abtWZbV8" target="_blank" rel="noopener noreferrer">龜山區明德路54巷5號</a></p><p class="tel">03-3200651</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">TEMPO</div><h3>國際店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/iC4mTNHCd3L3WC9n9" target="_blank" rel="noopener noreferrer">桃園區國際路一段1208號</a></p><p class="tel">03-2288530</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">TEMPO</div><h3>市府店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/y1CYBev4J3ux9B247" target="_blank" rel="noopener noreferrer">桃園區廈門街77號</a></p><p class="tel">03-3331311</p><p>10:00–19:00／週日至17:00</p></div>
 </div>
 <div class="notice">營運管理中心｜桃園市桃園區大同路77-3號3樓｜客服專線 03-3332282</div>
+
 <div class="compact"><span class="tag">廠商</span><h3>廠商與設備聯絡資訊</h3></div>
-<div class="vendor-grid" data-search="廠商 肯邦 訂貨 GW 美科 美髮工會 敏楊 世界 桑多麗 衛生紙 垃圾袋 保鮮膜 鋁箔紙 監視系統 冷氣 冷氣保養 雜誌 洗衣機 烘衣機 燈具 飲水 影印 打卡鐘 招牌 帆布 廣告">
-<div class="vendor"><b>肯邦訂貨</b><span>02-82265811／02-82265775</span></div><div class="vendor"><b>肯邦學院</b><span>02-82265822</span></div>
-<div class="vendor"><b>GW</b><span>02-25181500 #201｜陳小姐</span></div><div class="vendor"><b>美科</b><span>02-89521800 #258｜謝小姐</span></div>
-<div class="vendor"><b>美髮工會</b><span>03-4920921 #11／#12</span></div><div class="vendor"><b>敏楊</b><span>0906-538-870｜John 王經理</span></div>
-<div class="vendor"><b>世界</b><span>0932-551-623｜李文濱</span></div><div class="vendor"><b>桑多麗</b><span>0958-353-963｜游憲琪</span></div>
-<div class="vendor"><b>衛生紙・垃圾袋・保鮮膜</b><span>03-4620966／0933-408-165｜蔡經理</span></div><div class="vendor"><b>鋁箔紙</b><span>0958-208-456｜滋原</span></div>
-<div class="vendor"><b>監視系統</b><span>03-2188063／0926-729-789｜阿國</span></div><div class="vendor"><b>冷氣</b><span>03-3920999／0935-993-434｜顧先生</span></div>
-<div class="vendor"><b>冷氣保養</b><span>0928-101-427｜郭先生</span></div><div class="vendor"><b>雜誌</b><span>0938-335-451｜葉先生</span></div>
-<div class="vendor"><b>洗衣機・烘衣機</b><span>03-3312121／0800-258-558｜惠而浦</span></div><div class="vendor"><b>燈具</b><span>03-3634145／0952-969-078｜陳明鐘</span></div>
-<div class="vendor"><b>飲水</b><span>03-3414221／0986-516-655｜曾國河</span></div><div class="vendor"><b>影印・打卡鐘</b><span>03-4531581／0935-246-254｜梁仲崑</span></div>
-<div class="vendor"><b>招聘・帆布・廣告</b><span>0931-199-075｜北泰廣告</span></div>
+<div class="vendor-directory" data-search="廠商 肯邦訂貨 肯邦學院 GW歌薇 覺亞 敏楊 世界 慕詠 桑多麗 日月星辰 偉志牌 力孚 振知 北泰廣告 鼎碩 中美 首銘 永順鋁 鋁燈 千合 寶椅子 良欣 魏國翔 美髮工會 秉承">
+<table>
+<thead>
+<tr><th>類別</th><th>公司名稱</th><th>手機</th><th>市話</th><th>分機</th><th>聯絡人</th></tr>
+</thead>
+<tbody>
+<tr><td data-label="類別"></td><td data-label="公司名稱">肯邦訂貨</td><td data-label="手機"></td><td data-label="市話">02-82265811</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">肯邦學院</td><td data-label="手機"></td><td data-label="市話">02-82265822</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">GW歌薇</td><td data-label="手機"></td><td data-label="市話">02-25181500</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">覺亞</td><td data-label="手機"></td><td data-label="市話">02-89521800</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">敏楊</td><td data-label="手機">0906-538-870</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人">John王經理</td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">世界</td><td data-label="手機">0932-551-623</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人">李文濱</td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">慕詠</td><td data-label="手機">0933-408-165</td><td data-label="市話">4620966</td><td data-label="分機"></td><td data-label="聯絡人">蔡經理</td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">桑多麗</td><td data-label="手機">0958-353-963</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人">游惠琪</td></tr>
+<tr><td data-label="類別">燈具</td><td data-label="公司名稱">日月星辰</td><td data-label="手機">0952-969-078</td><td data-label="市話">3634145</td><td data-label="分機"></td><td data-label="聯絡人">陳明鐘</td></tr>
+<tr><td data-label="類別">飲水</td><td data-label="公司名稱">偉志牌</td><td data-label="手機">0986-516-555</td><td data-label="市話">3414211</td><td data-label="分機"></td><td data-label="聯絡人">曾國河</td></tr>
+<tr><td data-label="類別">冷氣</td><td data-label="公司名稱">力孚</td><td data-label="手機">0928-101-427</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人">郭先生</td></tr>
+<tr><td data-label="類別">影印/打卡</td><td data-label="公司名稱">振知</td><td data-label="手機"></td><td data-label="市話">4531581</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別">招牌</td><td data-label="公司名稱">北泰廣告</td><td data-label="手機">0931-199-075</td><td data-label="市話">3019922</td><td data-label="分機"></td><td data-label="聯絡人">蔡記徽</td></tr>
+<tr><td data-label="類別">監視系統</td><td data-label="公司名稱">鼎碩</td><td data-label="手機">0926-729-789</td><td data-label="市話">2188063</td><td data-label="分機"></td><td data-label="聯絡人">曾睿淵（阿國）</td></tr>
+<tr><td data-label="類別">音響</td><td data-label="公司名稱">中美</td><td data-label="手機">0908-883-191</td><td data-label="市話">4632266</td><td data-label="分機"></td><td data-label="聯絡人">李宗謙</td></tr>
+<tr><td data-label="類別">洗-烘衣機</td><td data-label="公司名稱">首銘(永順鋁)</td><td data-label="手機">3375459</td><td data-label="市話">3312111</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別">鋁燈</td><td data-label="公司名稱">千合</td><td data-label="手機"></td><td data-label="市話">02-22829828</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別" rowspan="2">美髮椅</td><td data-label="公司名稱">寶椅子</td><td data-label="手機"></td><td data-label="市話">02-82213009</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別">良欣</td><td data-label="公司名稱"></td><td data-label="手機">02-22511886</td><td data-label="市話"></td><td data-label="分機"></td></tr>
+<tr><td data-label="類別">木工</td><td data-label="公司名稱">魏國翔</td><td data-label="手機">0915-557-053</td><td data-label="市話"></td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別"></td><td data-label="公司名稱">美髮工會</td><td data-label="手機"></td><td data-label="市話">004-920-921</td><td data-label="分機">11・12</td><td data-label="聯絡人"></td></tr>
+<tr><td data-label="類別">衛生紙・垃圾袋・保鮮膜</td><td data-label="公司名稱">秉承</td><td data-label="手機"></td><td data-label="市話">4508966</td><td data-label="分機"></td><td data-label="聯絡人"></td></tr>
+</tbody>
+</table>
 </div>
 </section>
 <div class="quote"><p>從現在開始，我們所做的一切，都是為了成就你和你的成功。</p><small>PAMA · 幸福企業 · 與您一起實踐夢想</small></div>
