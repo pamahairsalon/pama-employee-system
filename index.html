@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V120</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V124</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -1228,6 +1228,62 @@ section[id]{
   }
 }
 
+
+/* ===== UI icons: SVG only ===== */
+.ui-icon{
+  width:18px;
+  height:18px;
+  display:inline-block;
+  flex:0 0 auto;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vertical-align:middle;
+}
+.dream-link-icon{
+  width:34px;
+  height:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 34px;
+  border-radius:50%;
+  color:var(--gold);
+  border:1px solid rgba(202,168,95,.55);
+  background:rgba(255,246,233,.55);
+}
+.dream-link-icon .ui-icon{
+  width:20px;
+  height:20px;
+}
+.store-address-link{
+  display:inline-flex !important;
+  align-items:center;
+  gap:7px;
+}
+.store-address-link .ui-icon-pin{
+  width:17px;
+  height:17px;
+  color:var(--gold);
+  flex:0 0 17px;
+}
+.ui-icon-arrow{
+  width:15px;
+  height:15px;
+}
+.back-to-top > span{
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+}
+.back-to-top .ui-icon-top{
+  width:19px;
+  height:19px;
+  color:currentColor;
+}
+
 </style>
 <style>
 /* ================= PAMA V100 — FINAL SELF-OPTIMIZATION PASS ================= */
@@ -1684,12 +1740,6 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
   color:var(--green-deep);
   border-bottom-color:var(--gold);
 }
-.store-address-link::after{
-  content:" ↗";
-  color:var(--gold);
-  font-size:.9em;
-  white-space:nowrap;
-}
 @media(max-width:719px){
   .store-address-link{
     display:inline;
@@ -1700,7 +1750,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 
 
 <style>
-/* ===== V120: vendor mobile layout — rebuilt as full-width cards ===== */
+/* ===== V124: vendor mobile layout — rebuilt as full-width cards ===== */
 @media (max-width:719px){
   .vendor-directory{
     width:100%!important;
@@ -1841,6 +1891,31 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 }
 </style>
 
+
+<style>
+/* ===== V124: search field icon — correct target only ===== */
+.searchbox > .ui-icon-search-field{
+  width:19px!important;
+  height:19px!important;
+  flex:0 0 19px!important;
+  margin-right:10px!important;
+  color:#294641!important;
+  fill:none!important;
+  stroke:currentColor!important;
+  stroke-width:1.8!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+}
+@media(max-width:719px){
+  .searchbox > .ui-icon-search-field{
+    width:18px!important;
+    height:18px!important;
+    flex-basis:18px!important;
+    margin-right:9px!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -1872,14 +1947,20 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </div>
 <div class="search">
 <div class="searchbox">
-<svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l5 5"></path></svg>
+<svg class="ui-icon ui-icon-search-field" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <circle cx="10.2" cy="10.2" r="6.1"></circle>
+  <path d="m14.7 14.7 4.8 4.8"></path>
+</svg>
 <input autocomplete="off" id="searchInput" placeholder="搜尋制度、福利、薪資、抽成、特休、圓夢課程、分店、廠商……" type="search"/>
 </div>
 </div>
 </header>
 
 <button class="back-to-top" id="backToTop" type="button" aria-label="回到最上方" title="回到最上方">
-  <span aria-hidden="true">↑</span>
+  <span aria-hidden="true"><svg class="ui-icon ui-icon-top" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M12 19V5"></path>
+  <path d="m6 11 6-6 6 6"></path>
+</svg></span>
   <small>TOP</small>
 </button>
 
@@ -2102,7 +2183,12 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="notice" data-search="圓夢 評鑑 考核內容 每月 評鑑考核日 報名 店長 總管理處"><strong>每項圓夢評鑑考核皆有規定的考核內容。</strong><br/>各項圓夢評鑑依該項目所規定之考核內容進行考核。每月會安排圓夢評鑑考核日，有意參加者請向店長或總管理處報名。</div>
 <div class="dream-assessment-link">
   <a href="https://drive.google.com/drive/folders/1-bcau2iCMlgaRMBDTx5Ouqz7VoD_9kZS?usp=sharing" target="_blank" rel="noopener noreferrer">
-    <span class="dream-link-icon" aria-hidden="true">↗</span>
+    <span class="dream-link-icon" aria-hidden="true"><svg class="ui-icon ui-icon-circle-link" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <circle cx="12" cy="12" r="10"></circle>
+  <path d="M9.2 14.8 14.8 9.2"></path>
+  <path d="M10 8.2h-1.4A2.6 2.6 0 0 0 6 10.8v4.4a2.6 2.6 0 0 0 2.6 2.6H13a2.6 2.6 0 0 0 2.6-2.6v-1.4"></path>
+  <path d="M14 6.2h1.4A2.6 2.6 0 0 1 18 8.8v4.4"></path>
+</svg></span>
     <span>
       <strong>查看帕瑪圓夢評鑑考核</strong>
       <small>考核內容・評分標準・相關資料</small>
@@ -2201,18 +2287,54 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="head"><div class="no">09</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 10l8-6 8 6 v10H4z"></path><path d="M9 20v-6h6v6"></path></svg><h2 class="title">分店・廠商・實用資訊</h2></div><div class="sub">分店聯絡｜營運管理中心｜廠商聯絡</div></div></div>
 <div class="compact"><span class="tag">分店</span><h3>帕瑪系列分店資訊</h3></div>
 <div class="store-grid" data-search="分店 PAMA INDEX TEMPO 莊敬 金陵 弘揚 延平 成功 中山 中正 八德 龜山 國際 市府">
-<div class="store"><div class="brandline">PAMA</div><h3>莊敬店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/SUT9ficx7LicBMVA8" target="_blank" rel="noopener noreferrer">桃園區莊敬路一段330號</a></p><p class="tel">03-3163227</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>金陵店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/5fzHj6aAdsGftfoB6" target="_blank" rel="noopener noreferrer">平鎮區金陵路二段9號</a></p><p class="tel">03-4282178</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>弘揚店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/YuwVEabTT7BAno9c7" target="_blank" rel="noopener noreferrer">中壢區弘揚路6號</a></p><p class="tel">03-4561699</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>延平店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/owuZGPfswnbqqD8R7" target="_blank" rel="noopener noreferrer">桃園市中壢區延平路604號</a></p><p class="tel">03-4259117</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>成功店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/My8GKn1qkBScX4os5" target="_blank" rel="noopener noreferrer">桃園區成功路二段141號</a></p><p class="tel">03-3316665</p><p>10:00–18:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">PAMA</div><h3>中山店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/3Fndekhi8ZPQ5ZP8A" target="_blank" rel="noopener noreferrer">中壢區中山東路二段164號</a></p><p class="tel">03-4650685</p><p>09:00–18:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">INDEX</div><h3>中正店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/goNim9PUWTNyrJmbA" target="_blank" rel="noopener noreferrer">桃園區中正路627號</a></p><p class="tel">03-3175822</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">INDEX</div><h3>延平店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/aFNSFLiGJLH1Qjgq7" target="_blank" rel="noopener noreferrer">桃園市桃園區延平路37號</a></p><p class="tel">03-3665733</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">INDEX</div><h3>八德店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/G66dL2N4CQRUxRS39" target="_blank" rel="noopener noreferrer">八德區介壽路一段854號</a></p><p class="tel">03-3646565</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">INDEX</div><h3>龜山店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/NKLR2vyN7abtWZbV8" target="_blank" rel="noopener noreferrer">龜山區明德路54巷5號</a></p><p class="tel">03-3200651</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">TEMPO</div><h3>國際店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/iC4mTNHCd3L3WC9n9" target="_blank" rel="noopener noreferrer">桃園區國際路一段1208號</a></p><p class="tel">03-2288530</p><p>10:00–19:00／週日至17:00</p></div>
-<div class="store"><div class="brandline">TEMPO</div><h3>市府店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/y1CYBev4J3ux9B247" target="_blank" rel="noopener noreferrer">桃園區廈門街77號</a></p><p class="tel">03-3331311</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>莊敬店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/SUT9ficx7LicBMVA8" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>桃園區莊敬路一段330號</a></p><p class="tel">03-3163227</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>金陵店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/5fzHj6aAdsGftfoB6" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>平鎮區金陵路二段9號</a></p><p class="tel">03-4282178</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>弘揚店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/YuwVEabTT7BAno9c7" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>中壢區弘揚路6號</a></p><p class="tel">03-4561699</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>延平店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/owuZGPfswnbqqD8R7" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>桃園市中壢區延平路604號</a></p><p class="tel">03-4259117</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>成功店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/My8GKn1qkBScX4os5" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>桃園區成功路二段141號</a></p><p class="tel">03-3316665</p><p>10:00–18:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">PAMA</div><h3>中山店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/3Fndekhi8ZPQ5ZP8A" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>中壢區中山東路二段164號</a></p><p class="tel">03-4650685</p><p>09:00–18:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">INDEX</div><h3>中正店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/goNim9PUWTNyrJmbA" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>桃園區中正路627號</a></p><p class="tel">03-3175822</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">INDEX</div><h3>延平店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/aFNSFLiGJLH1Qjgq7" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>桃園市桃園區延平路37號</a></p><p class="tel">03-3665733</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">INDEX</div><h3>八德店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/G66dL2N4CQRUxRS39" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>八德區介壽路一段854號</a></p><p class="tel">03-3646565</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">INDEX</div><h3>龜山店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/NKLR2vyN7abtWZbV8" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>龜山區明德路54巷5號</a></p><p class="tel">03-3200651</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">TEMPO</div><h3>國際店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/iC4mTNHCd3L3WC9n9" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>桃園區國際路一段1208號</a></p><p class="tel">03-2288530</p><p>10:00–19:00／週日至17:00</p></div>
+<div class="store"><div class="brandline">TEMPO</div><h3>市府店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/y1CYBev4J3ux9B247" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
+  <circle cx="12" cy="10" r="2.7"></circle>
+</svg>桃園區廈門街77號</a></p><p class="tel">03-3331311</p><p>10:00–19:00／週日至17:00</p></div>
 </div>
 <div class="notice">營運管理中心｜桃園市桃園區大同路77-3號3樓｜客服專線 03-3332282</div>
 
@@ -2276,7 +2398,10 @@ function doSearch(q){
     ? hits.map((x,i)=>`<div class="item" data-index="${x.index}" role="button" tabindex="0">
         <b>${x.title}</b>
         <span>${x.text.slice(0,180)}${x.text.length>180?'…':''}</span>
-        <span class="jump">點擊前往內容 →</span>
+        <span class="jump">點擊前往內容 <svg class="ui-icon ui-icon-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h13"></path>
+  <path d="m13 6 6 6-6 6"></path>
+</svg></span>
       </div>`).join('')
     : '<div class="item"><b>找不到相符資訊</b><span>請換一個關鍵字，例如「特休」、「店販」、「圓夢」、「旅遊」或「分店」。</span></div>';
   result.classList.remove('hidden');overlay.classList.remove('hidden');
