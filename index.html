@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V129</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V131</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -2016,6 +2016,71 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 }
 </style>
 
+
+<style>
+/* ===== V131 全頁間距與表格行距優化 ===== */
+/* 角色標題與前一段內容拉開，避免區塊黏在一起 */
+.role-section-title{
+  margin-top:48px!important;
+  margin-bottom:30px!important;
+  padding-bottom:20px!important;
+}
+.designer-role-title{margin-top:0!important;}
+.assistant-role-title{margin-top:72px!important;}
+
+/* 所有表格統一增加列高與上下留白，提升長頁閱讀舒適度 */
+table th,
+table td{
+  padding:17px 18px!important;
+  line-height:1.85!important;
+  vertical-align:middle!important;
+}
+
+/* 表格內的次要說明保持清楚的行距 */
+table td .small,
+table td .assistant-note{
+  line-height:1.75!important;
+}
+
+/* 小標與前一張表格之間保留明確閱讀節奏 */
+.table + .compact{
+  margin-top:48px!important;
+}
+
+/* 休假、福利等段落中的表格後，避免內容過度緊密 */
+.table{
+  margin-bottom:22px;
+}
+
+@media(max-width:719px){
+  .role-section-title{
+    margin-top:40px!important;
+    margin-bottom:26px!important;
+    padding-bottom:17px!important;
+  }
+  .assistant-role-title{margin-top:54px!important;}
+
+  table th,
+  table td{
+    padding:14px 12px!important;
+    line-height:1.8!important;
+    vertical-align:middle!important;
+  }
+
+  .table{
+    margin-bottom:18px;
+  }
+}
+
+@media(max-width:390px){
+  .assistant-role-title{margin-top:48px!important;}
+  table th,
+  table td{
+    padding:13px 11px!important;
+    line-height:1.78!important;
+  }
+}
+</style>
 </head>
 <body>
 <header>
@@ -2207,12 +2272,17 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="assistant-commission-block">
   <div class="compact"><span class="tag">抽成</span><h3>助理抽成制度</h3></div>
 
+  <div class="notice" data-search="助理抽成計算原則 技術服務 店販抽成 個人休假日 獨立服務顧客">
+    <strong>助理抽成計算原則</strong><br/>
+    助理之技術服務及店販抽成業績，須為<strong>於個人休假日獨立服務顧客所產生之業績</strong>，始得列入個人抽成計算；平日正常出勤期間協助設計師服務之業績，不列入助理個人抽成業績。
+  </div>
+
   <div class="table" data-search="助理 技術抽成 50% 店販抽成">
     <table>
       <tr><th>助理抽成項目</th><th>抽成規則</th></tr>
       <tr>
         <td>技術抽成</td>
-        <td><strong>50%</strong><br/><span class="assistant-note">備註：僅能利用自己的休假日服務顧客</span></td>
+        <td><strong>50%</strong></td>
       </tr>
       <tr>
         <td>店販抽成</td>
