@@ -2022,8 +2022,40 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 }
 </style>
 
+<style>.culture-purpose-title{margin-top:38px;margin-bottom:18px;}@media(max-width:719px){.culture-purpose-title{margin-top:28px;margin-bottom:14px;}}</style>
+<style id="access-gate-style">
+body.access-locked{overflow:hidden!important}
+.access-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:linear-gradient(135deg,#375B57 0%,#294641 100%);color:#FFF6E9}
+.access-gate-card{width:min(460px,100%);padding:42px 38px;background:#FFF9F0;border:1px solid rgba(201,168,94,.5);border-radius:18px;box-shadow:0 28px 80px rgba(0,0,0,.28);text-align:center;color:#294641}
+.access-gate-mark{font:11px Arial,sans-serif;letter-spacing:.28em;color:#C9A85E;margin-bottom:18px}
+.access-gate-card h1{margin:0 0 8px;font-size:30px;font-weight:500;color:#294641}
+.access-gate-card p{margin:0 0 24px;font-size:14px;line-height:1.8;color:#596560}
+.access-gate-form{display:flex;gap:10px}
+.access-gate-form input{flex:1;min-width:0;height:48px;padding:0 14px;border:1px solid rgba(55,91,87,.24);border-radius:9px;background:#fff;color:#263B39;outline:none;font-size:15px}
+.access-gate-form input:focus{border-color:#C9A85E;box-shadow:0 0 0 3px rgba(201,168,94,.12)}
+.access-gate-form button{height:48px;padding:0 20px;border:1px solid rgba(223,183,67,.45);border-radius:9px;background:#375B57;color:#FFF6E9;cursor:pointer;font-size:14px;white-space:nowrap}
+.access-gate-form button:hover{background:#294641}
+.access-gate-error{min-height:24px;margin-top:12px;color:#A65B4B;font-size:13px}
+.access-gate-note{margin-top:16px;font-size:11px!important;color:#8A928E!important;line-height:1.6!important}
+@media(max-width:520px){.access-gate-card{padding:34px 22px}.access-gate-form{flex-direction:column}.access-gate-form button{width:100%}}
+</style>
+
 </head>
-<body>
+<body class="access-locked">
+<div class="access-gate" id="accessGate" role="dialog" aria-modal="true" aria-labelledby="accessGateTitle">
+  <div class="access-gate-card">
+    <div class="access-gate-mark">PAMA HAIR SALON · SINCE 1989</div>
+    <h1 id="accessGateTitle">帕瑪員工福利制度</h1>
+    <p>本制度為內部員工資訊，請輸入觀看密碼後進入。</p>
+    <form class="access-gate-form" id="accessGateForm">
+      <input id="accessPassword" type="password" autocomplete="current-password" placeholder="請輸入觀看密碼" aria-label="觀看密碼" required />
+      <button type="submit">進入制度</button>
+    </form>
+    <div class="access-gate-error" id="accessGateError" aria-live="polite"></div>
+    <div class="access-gate-note">解鎖後於本次瀏覽期間保持登入。</div>
+  </div>
+</div>
+
 <header>
 <div class="nav">
 <div class="brand">PAMA HAIR SALON</div>
@@ -2101,6 +2133,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 
 </div>
 </div>
+<div class="compact culture-purpose-title"><span class="tag">文化宗旨</span><h3>帕瑪的文化宗旨</h3></div>
 <div class="culture-values">
 <div class="culture-value">
 <div class="value-kicker">01</div><h3>愛</h3>
@@ -2108,15 +2141,11 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </div>
 <div class="culture-value">
 <div class="value-kicker">02</div><h3>學習</h3>
-<p>唯有不斷學習才能不斷成長【學無止盡】。</p>
+<p>唯有不斷學習才能不斷成長【學無止盡】；觀念與態度：自我謙卑、尊師重道；團隊的貢獻與使命感。</p>
 </div>
 <div class="culture-value">
 <div class="value-kicker">03</div><h3>分享</h3>
 <p>熱情與分享是一門必須學習的功課；除了訓練表達力、創造個人舞台機會，成為「分享者」是成長最快的方式（教學相長）。</p>
-</div>
-<div class="culture-value">
-<div class="value-kicker">04</div><h3>謙卑</h3>
-<p>觀念與態度：自我謙卑、尊師重道；團隊的貢獻與使命感。</p>
 </div>
 </div>
 <div class="compact"><span class="tag">核心總部</span><h3>帕瑪企業營運總部</h3></div>
@@ -2247,7 +2276,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <article class="card" data-search="輪休 8天 連休 春節"><h3>輪休</h3><ul><li>每人可排輪休8天。</li><li>連休需傳簽呈，個案處理。</li><li>春節期間，年假前後管休，依總部公告。</li><li>上課進修學習者可優先排假。</li></ul></article>
 </div>
 <div class="compact"><span class="tag">特休</span><h3>年資特休</h3></div>
-<div class="table" data-search="年資特休 1 5 7天 10天 30天"><table><tr><th>年資</th><th>特休</th></tr><tr><td>滿1～5年</td><td>7天</td></tr><tr><td>滿5～10年</td><td>10天</td></tr><tr><td>10年以上</td><td>每增加1年＋1天</td></tr><tr><td>上限</td><td>30天</td></tr></table></div>
+<div class="table" data-search="年資特休 1 4 5 10 7天 10天 30天"><table><tr><th>年資</th><th>特休</th></tr><tr><td>1～4年</td><td>7天</td></tr><tr><td>5～10年</td><td>10天</td></tr><tr><td>10年以上</td><td>每增加1年＋1天</td></tr><tr><td>上限</td><td>30天</td></tr></table></div>
 <div class="notice">年資自升任設計師開始計算。特休分上半年、下半年休，需事先傳簽呈；一年平均休完；出國可合併使用；不可累積跨年使用。</div>
 <div class="compact"><span class="tag">業績</span><h3>業績特休</h3></div>
 <div class="table" data-search="業績特休 100000 150000 200000 250000 300000"><table><tr><th>平均一年技術業績</th><th>額外特休</th></tr><tr><td>$100,000以上</td><td>1天</td></tr><tr><td>$150,000以上</td><td>3天</td></tr><tr><td>$200,000以上</td><td>4天</td></tr><tr><td>$250,000以上</td><td>5天</td></tr><tr><td>$300,000以上</td><td>6天</td></tr></table></div>
@@ -2529,6 +2558,47 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </section>
 </main>
 <footer>PAMA HAIR SALON · SINCE 1989 · 帕瑪員工福利制度</footer>
+
+<script id="access-gate-script">
+(function(){
+  const gate=document.getElementById('accessGate');
+  const form=document.getElementById('accessGateForm');
+  const input=document.getElementById('accessPassword');
+  const error=document.getElementById('accessGateError');
+  const HASH='59f2b9f2d24fd8add88783eeb4205195d6ef6a883910cf58c035c4ab83768ec8';
+  const KEY='pama_employee_access_granted';
+  function unlock(){
+    gate.remove();
+    document.body.classList.remove('access-locked');
+    try{sessionStorage.setItem(KEY,'1')}catch(e){}
+  }
+  async function sha256(text){
+    if(window.crypto && crypto.subtle){
+      const data=new TextEncoder().encode(text);
+      const hash=await crypto.subtle.digest('SHA-256',data);
+      return [...new Uint8Array(hash)].map(b=>b.toString(16).padStart(2,'0')).join('');
+    }
+    return '';
+  }
+  try{
+    if(sessionStorage.getItem(KEY)==='1') unlock();
+  }catch(e){}
+  if(gate){
+    setTimeout(()=>input.focus(),50);
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();
+      error.textContent='';
+      const value=input.value;
+      const digest=await sha256(value);
+      if(digest===HASH){unlock();return;}
+      error.textContent='密碼錯誤，請重新輸入。';
+      input.value='';
+      input.focus();
+    });
+  }
+})();
+</script>
+
 <script>
 const searchInput=document.getElementById('searchInput'), result=document.getElementById('searchResult'), overlay=document.getElementById('overlay');
 const items=[...document.querySelectorAll('[data-search]')].map((el,i)=>({
