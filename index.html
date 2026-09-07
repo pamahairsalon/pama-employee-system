@@ -7,7 +7,7 @@
 <meta content="single-page-long-scroll" name="format"/>
 <meta content="desktop-and-mobile" name="responsive"/>
 <meta content="PAMA cream / deep green / blue / gold, luxury visual language" name="brand-system"/>
-<title>PAMA HAIR SALON｜帕瑪員工福利制度 V126</title>
+<title>PAMA HAIR SALON｜帕瑪員工福利制度 V129</title>
 <style>
 :root{
 --bg:#f5f0e6;
@@ -1938,6 +1938,84 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 }
 </style>
 
+
+<style>
+/* ===== V127: designer/assistant split + lecturer subsidy ===== */
+.assistant-commission-block{
+  margin-top:18px;
+  padding-top:28px;
+  border-top:1px solid var(--gold-line);
+}
+.education-subsidy{
+  border:1px solid var(--line);
+  background:var(--surface);
+  border-radius:12px;
+  overflow:hidden;
+}
+.education-subsidy-intro{
+  padding:22px 24px;
+  background:var(--surface-alt);
+  border-bottom:1px solid var(--line);
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+.education-subsidy-item{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:18px;
+  padding:22px 24px;
+  border-bottom:1px solid var(--line);
+}
+.education-subsidy-item:last-child{border-bottom:0}
+.education-subsidy-no{
+  width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-family:Georgia,serif;
+}
+.education-subsidy-item h4{
+  margin:0 0 7px;color:var(--green-deep);font-size:17px;font-weight:600;
+}
+.education-subsidy-item p{
+  margin:0;color:var(--body);font-size:14px;line-height:1.9;
+}
+.education-subsidy-core{background:rgba(223,183,67,.07)}
+@media(max-width:719px){
+  .assistant-commission-block{margin-top:22px;padding-top:22px}
+  .education-subsidy-intro,.education-subsidy-item{padding:18px}
+  .education-subsidy-item{grid-template-columns:42px 1fr;gap:12px}
+  .education-subsidy-no{width:34px;height:34px}
+}
+</style>
+
+
+<style>
+/* ===== V128: role heading consistency + assistant commission detail ===== */
+.role-section-title h3{
+  margin:0!important;
+}
+.assistant-note{
+  display:inline-block;
+  margin-top:6px;
+  color:var(--muted)!important;
+  font-size:12px!important;
+  line-height:1.6!important;
+}
+.assistant-retail-commission{
+  margin-top:8px;
+  line-height:1.8;
+  font-size:13px;
+  color:var(--body);
+}
+@media(max-width:719px){
+  .assistant-note{
+    font-size:12px!important;
+  }
+  .assistant-retail-commission{
+    font-size:13px;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -2074,7 +2152,14 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <section data-section="03 薪資與抽成" id="income">
 
 <div class="head"><div class="no">03</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><path d="M4 7h16M6 3h12v18H6z"></path><path d="M9 11h6M9 15h4"></path></svg><h2 class="title">薪資・業績・抽成制度</h2></div><div class="sub">技術抽成｜店販抽成｜特殊項目｜協助點數</div></div></div>
-<div class="role-section-title assistant-role-title"><span class="role-index">01</span><div><div class="role-kicker">ASSISTANT</div><h3>助理薪資制度</h3><p>能力分級｜圓夢考核｜薪資晉升</p></div></div>
+<div class="designer-pay-block" data-search="設計師薪資 設計師 業績 抽成 技術 店販"><div class="role-section-title designer-role-title"><span class="role-index">01</span><div><h3>設計師</h3></div></div>
+<div class="notice important" data-search="無使用助理 技術抽成 50%"><strong>無使用助理｜請先看這裡</strong><br/>設計師未使用助理時，技術業績抽成一律 <strong>50%</strong>。以下表格中的「有使用助理」為使用助理時的抽成級距，兩種制度明確區分。</div>
+<div class="table" data-search="技術抽成 有助理 無助理 40 42 45 50"><table><tr><th>設計師技術業績</th><th>有使用助理</th><th>無使用助理</th></tr><tr><td>10萬元以下</td><td>40%</td><td rowspan="4"><strong>50%</strong></td></tr><tr><td>10萬～15萬元</td><td>42%</td></tr><tr><td>15萬～25萬元</td><td>45%</td></tr><tr><td>25萬元以上</td><td>50%</td></tr></table></div>
+<div class="compact"><span class="tag">店販</span><h3>店販抽成制度</h3></div>
+<div class="table" data-search="店販抽成 15 20 25"><table><tr><th>店販業績</th><th>抽成</th></tr><tr><td>$0～99,999</td><td>15%</td></tr><tr><td>$100,000～149,999</td><td>20%</td></tr><tr><td>$150,000以上</td><td>25%</td></tr></table></div>
+</div>
+
+<div class="role-section-title assistant-role-title"><span class="role-index">02</span><div><h3>助理</h3></div></div>
 <div class="notice salary-role" data-search="助理薪資 能力分級 A A+ A++ 最低工資 圓夢考核 現場服務">
   <strong>能力分級薪資制度</strong><br/>
   助理薪資以 A 級為基準。A 級薪資隨每年度政府公告之最低工資調整；薪資級距以圓夢考核及現場服務為依據，考核完成並經現場服務表現評估符合晉升條件者，於<strong>次月</strong>依核定級別調整薪資。
@@ -2118,14 +2203,30 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
     <span>符合晉升條件者，於次月依核定級別調整薪資。</span>
   </div>
 </div>
-<div class="designer-pay-block" data-search="設計師薪資 設計師 業績 抽成 技術 店販"><div class="role-section-title designer-role-title"><span class="role-index">02</span><div><div class="role-kicker">DESIGNER</div><h3>設計師薪資・業績・抽成制度</h3><p>技術抽成｜店販抽成｜特殊項目｜協助點數</p></div></div>
-<div class="notice important" data-search="無使用助理 技術抽成 50%"><strong>無使用助理｜請先看這裡</strong><br/>設計師未使用助理時，技術業績抽成一律 <strong>50%</strong>。以下表格中的「有使用助理」為使用助理時的抽成級距，兩種制度明確區分。</div>
-<div class="table" data-search="技術抽成 有助理 無助理 40 42 45 50"><table><tr><th>設計師技術業績</th><th>有使用助理</th><th>無使用助理</th></tr><tr><td>10萬元以下</td><td>40%</td><td rowspan="4"><strong>50%</strong></td></tr><tr><td>10萬～15萬元</td><td>42%</td></tr><tr><td>15萬～25萬元</td><td>45%</td></tr><tr><td>25萬元以上</td><td>50%</td></tr></table></div>
-<div class="compact"><span class="tag">店販</span><h3>店販抽成制度</h3></div>
-<div class="table" data-search="店販抽成 15 20 25"><table><tr><th>店販業績</th><th>抽成</th></tr><tr><td>$0～99,999</td><td>15%</td></tr><tr><td>$100,000～149,999</td><td>20%</td></tr><tr><td>$150,000以上</td><td>25%</td></tr></table></div>
-</div>
 
-</section>
+<div class="assistant-commission-block">
+  <div class="compact"><span class="tag">抽成</span><h3>助理抽成制度</h3></div>
+
+  <div class="table" data-search="助理 技術抽成 50% 店販抽成">
+    <table>
+      <tr><th>助理抽成項目</th><th>抽成規則</th></tr>
+      <tr>
+        <td>技術抽成</td>
+        <td><strong>50%</strong><br/><span class="assistant-note">備註：僅能利用自己的休假日服務顧客</span></td>
+      </tr>
+      <tr>
+        <td>店販抽成</td>
+        <td>
+          <div class="assistant-retail-commission">
+            <div>$0～99,999：15%</div>
+            <div>$100,000～149,999：20%</div>
+            <div>$150,000以上：25%</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div></section>
 <section data-section="04 休假制度" id="leave">
 
 <div class="head"><div class="no">04</div><div><div class="icon-title"><svg class="icon" viewbox="0 0 24 24"><rect height="15" rx="1" width="16" x="4" y="5"></rect><path d="M8 3v4M16 3v4M4 9h16"></path></svg><h2 class="title">休假制度</h2></div><div class="sub">排休｜輪休｜特休｜事假｜病假｜婚假｜喪假｜公假</div></div></div>
@@ -2248,6 +2349,29 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 </article>
 </div>
 
+
+<div class="compact"><span class="tag">講師進修</span><h3>教育講師進修補助制度</h3></div>
+<div class="education-subsidy" data-search="教育講師進修補助 主教老師 助教老師 教案更新 團隊回饋 社外課程 外聘師資">
+  <div class="education-subsidy-intro">
+    為持續提升公司教育品質與講師專業能力，鼓勵教育團隊接觸更多元的技術與新知，針對教育講師參與社外專業課程或公司外聘師資培訓，訂定以下原則：
+  </div>
+  <article class="education-subsidy-item">
+    <div class="education-subsidy-no">一</div>
+    <div><h4>主教老師進修補助</h4><p>主教老師因教學需求參與社外課程，或公司安排之外聘師資培訓，得依公司規定申請相關課程補助。</p></div>
+  </article>
+  <article class="education-subsidy-item">
+    <div class="education-subsidy-no">二</div>
+    <div><h4>進修後教案更新與團隊回饋</h4><p>接受公司補助之主教老師，應將所學內容進行整理、轉化與實務應用，協助更新及優化公司教育教案，並透過內部教育、技術分享或教材更新，將學習成果回饋教育團隊，讓個人的進修成為團隊共同成長的養分。</p></div>
+  </article>
+  <article class="education-subsidy-item">
+    <div class="education-subsidy-no">三</div>
+    <div><h4>助教老師補助原則</h4><p>如課程有助教老師共同參與，其補助與名額安排，原則上由主教老師依課程需求、教學分工及培育規劃進行安排與分配，再依公司相關規定執行。</p></div>
+  </article>
+  <article class="education-subsidy-item education-subsidy-core">
+    <div class="education-subsidy-no">四</div>
+    <div><h4>制度核心精神</h4><p>公司支持講師持續學習與精進，也期待每一次進修都能形成「學習 → 整理 → 教案更新 → 團隊分享 → 教學提升」的良性循環，讓教育資源不只成就個人，更能累積成為公司的共同資產與教育傳承。</p></div>
+  </article>
+</div>
 </section>
 <section data-section="07 模特兒制度" id="model">
 
@@ -2324,7 +2448,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="store"><div class="brandline">PAMA</div><h3>延平店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/owuZGPfswnbqqD8R7" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
   <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
   <circle cx="12" cy="10" r="2.7"></circle>
-</svg>桃園市中壢區延平路604號</a></p><p class="tel">03-4259117</p><p>10:00–19:00／週日至17:00</p></div>
+</svg>桃園市中壢區延平路604號</a></p><p class="tel">03-2807433</p><p>10:00–19:00／週日至17:00</p></div>
 <div class="store"><div class="brandline">PAMA</div><h3>成功店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/My8GKn1qkBScX4os5" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
   <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
   <circle cx="12" cy="10" r="2.7"></circle>
@@ -2332,7 +2456,7 @@ p,li,td,small,.plain-note,.detail,.card p,.dream p,.store p,.vendor span{opacity
 <div class="store"><div class="brandline">PAMA</div><h3>中山店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/3Fndekhi8ZPQ5ZP8A" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
   <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
   <circle cx="12" cy="10" r="2.7"></circle>
-</svg>中壢區中山東路二段164號</a></p><p class="tel">03-4650685</p><p>09:00–18:00／週日至17:00</p></div>
+</svg>中壢區中山東路二段164號</a></p><p class="tel">03-4650687</p><p>09:00–18:00／週日至17:00</p></div>
 <div class="store"><div class="brandline">INDEX</div><h3>中正店</h3><p><a class="store-address-link" href="https://maps.app.goo.gl/goNim9PUWTNyrJmbA" target="_blank" rel="noopener noreferrer"><svg class="ui-icon ui-icon-pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
   <path d="M20 10.2c0 5.2-8 10.8-8 10.8S4 15.4 4 10.2a8 8 0 1 1 16 0Z"></path>
   <circle cx="12" cy="10" r="2.7"></circle>
