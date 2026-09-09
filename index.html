@@ -2083,7 +2083,7 @@ body.access-locked{overflow:hidden!important}
   </div>
 </div>
 
-<div class="access-gate" id="accessGate" role="dialog" aria-modal="true" aria-labelledby="accessGateTitle"><div class="access-gate-card"><div class="access-gate-mark">PAMA HAIR SALON · SINCE 1989</div><h1 id="accessGateTitle">帕瑪員工福利制度</h1><p>本制度為內部員工資訊，請輸入觀看密碼後進入。</p><form class="access-gate-form" id="accessGateForm"><input id="accessPassword" type="password" autocomplete="current-password" placeholder="請輸入觀看密碼" aria-label="觀看密碼" required/><button type="submit">進入制度</button></form><div class="access-gate-error" id="accessGateError" aria-live="polite"></div><div class="access-gate-note">解鎖後於本次瀏覽期間保持登入。</div></div></div><header>
+<header>
 <div class="nav">
 <div class="brand">PAMA HAIR SALON</div>
 <div class="category-menu-wrap">
@@ -2791,7 +2791,5 @@ if(backToTop){
 }
 
 
-/* V136 password gate */
-(function(){const gate=document.getElementById('accessGate'),form=document.getElementById('accessGateForm'),input=document.getElementById('accessPassword'),error=document.getElementById('accessGateError'),PASSWORD='pamasince1989';if(!gate||!form||!input)return;function unlock(){document.body.classList.remove('access-locked');gate.style.display='none';try{sessionStorage.setItem('pamaEmployeeUnlocked','1')}catch(e){}}try{if(sessionStorage.getItem('pamaEmployeeUnlocked')==='1')unlock()}catch(e){}form.addEventListener('submit',e=>{e.preventDefault();if(input.value===PASSWORD)unlock();else{error.textContent='密碼錯誤，請重新輸入。';input.select()}})})();
 </script>
 </body></html>
